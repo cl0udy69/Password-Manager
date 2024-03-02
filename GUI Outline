@@ -3,17 +3,24 @@ from tkinter import messagebox
 import json
 import os
 import random
-import sys
 
 class DataManagementSystem:
     def __init__(self, root):
         self.root = root
         self.root.title("Dorian's Data System")
 
-        
+    
         self.domain_var = tk.StringVar()
         self.username_var = tk.StringVar()
         self.password_var = tk.StringVar()
+
+        
+        self.amount_var = tk.StringVar()
+        self.length_var = tk.StringVar()
+        self.special_var = tk.StringVar()
+        self.numbers_var = tk.StringVar()
+        self.lowercase_var = tk.StringVar()
+        self.capitals_var = tk.StringVar()
 
         
         self.saved_logins = {}
@@ -27,10 +34,12 @@ class DataManagementSystem:
         self.frames = {}
         self.create_frames()
 
-        
+       
         self.create_widgets()
-        
+
     entry_style = {'font': ('Arial', 12), 'bg': 'white', 'width': 20}
+    label_style = {'font': ('Montserrat', 12), 'bg': '#f0f0f0'}
+    button_style = {'font': ('Montserrat', 12), 'bg': '#4CAF50', 'fg': 'white', 'width': 15, 'height': 1}
 
     def load_data_from_file(self):
         DATA_FILE = 'save_data.json'
@@ -52,8 +61,8 @@ class DataManagementSystem:
             json.dump(data_to_save, file)
 
     def create_frames(self):
-        
-        for option in ['Save Login', 'Generate Password', 'Save Personal Information', 'Save Banking Info', 'See All Saved Logins', 'See All saved Address\'s', 'See All Saved Banking Information', 'See All Saved Data']:
+       
+        for option in ['Save Login', 'Generate Password', 'Save Personal Information', 'Save Banking Info', 'See All Saved Data']:
             self.frames[option] = tk.Frame(self.root)
 
     def create_widgets(self):
@@ -61,19 +70,15 @@ class DataManagementSystem:
         self.root.geometry("400x300")
         self.root.configure(bg="#f0f0f0")
 
-        label_style = {'font': ('Arial', 12), 'bg': '#f0f0f0'}
-        button_style = {'font': ('Arial', 12), 'bg': '#4CAF50', 'fg': 'white', 'width': 15, 'height': 1}
         
-        
-       
-        tk.Label(self.root, text="Select an option:", **label_style).pack(pady=10)
+        tk.Label(self.root, text="Select an option:", **self.label_style).pack(pady=10)
 
-        
+       
         options = ['Save Login', 'Generate Password', 'Save Personal Information', 'Save Banking Info', 'See All Saved Data']
         for option in options:
-            tk.Button(self.root, text=option, command=lambda o=option: self.show_frame(o), **button_style).pack(pady=5)
+            tk.Button(self.root, text=option, command=lambda o=option: self.show_frame(o), **self.button_style).pack(pady=5)
 
-        
+       
         for frame in self.frames.values():
             frame.pack_forget()
 
@@ -86,7 +91,7 @@ class DataManagementSystem:
             frame.pack_forget()
         self.frames[option].pack(fill=tk.BOTH, expand=True)
 
-       
+        
         if option == 'Save Login':
             self.create_save_login_frame()
         elif option == 'Generate Password':
@@ -99,13 +104,6 @@ class DataManagementSystem:
             self.create_see_all_data_frame()
 
     def create_save_login_frame(self):
-        print('Enter the login you would like to save:')
-        domain = input('What domain does the login belong to? (e.g. Google, Facebook, Spotify, Steam): ')
-        username = input('Username/Email: ')
-        password = input('Password: ')
-
-        self.saved_logins[domain] = {'Username': username, 'Password': password}
-
         tk.Label(self.frames['Save Login'], text="Domain:", **self.label_style).grid(row=0, column=0, sticky=tk.E, pady=5)
         tk.Entry(self.frames['Save Login'], textvariable=self.domain_var, **self.entry_style).grid(row=0, column=1, pady=5)
         tk.Label(self.frames['Save Login'], text="Username/Email:", **self.label_style).grid(row=1, column=0, sticky=tk.E, pady=5)
@@ -115,22 +113,52 @@ class DataManagementSystem:
         tk.Button(self.frames['Save Login'], text="Save Login", command=self.save_login, **self.button_style).grid(row=3, column=0, columnspan=2, pady=10)
 
     def create_generate_password_frame(self):
-        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!$%^&*()_+-=[]{}|;:,.<>/?~'
-        number = int(input('Amount of passwords: '))
-        length = int(input('Length of password: '))
-        special = input('What special characters would you like to delete: ')
-        numbers = input('What numbers would you like to delete: ')
-        lowercase = input('What lowercase letters would you like to delete: ')
-        capitals = input('What capital letters would you like to delete: ')
+        tk.Label(self.frames['Generate Password'], text="Amount of passwords:", **self.label_style).grid(row=0, column=0, sticky=tk.E, pady=5)
+        tk.Entry(self.frames['Generate Password'], textvariable=self.amount_var, **self.entry_style).grid(row=0, column=1, pady=5)
 
-        for pwd in range(number):  
+        tk.Label(self.frames['Generate Password'], text="Length of password:", **self.label_style).grid(row=1, column=0, sticky=tk.E, pady=5)
+        tk.Entry(self.frames['Generate Password'], textvariable=self.length_var, **self.entry_style).grid(row=1, column=1, pady=5)
+
+        tk.Label(self.frames['Generate Password'], text="Special characters to exclude:", **self.label_style).grid(row=2, column=0, sticky=tk.E, pady=5)
+        tk.Entry(self.frames['Generate Password'], textvariable=self.special_var, **self.entry_style).grid(row=2, column=1, pady=5)
+
+        tk.Label(self.frames['Generate Password'], text="Numbers to exclude:", **self.label_style).grid(row=3, column=0, sticky=tk.E, pady=5)
+        tk.Entry(self.frames['Generate Password'], textvariable=self.numbers_var, **self.entry_style).grid(row=3, column=1, pady=5)
+
+        tk.Label(self.frames['Generate Password'], text="Lowercase letters to exclude:", **self.label_style).grid(row=4, column=0, sticky=tk.E, pady=5)
+        tk.Entry(self.frames['Generate Password'], textvariable=self.lowercase_var, **self.entry_style).grid(row=4, column=1, pady=5)
+
+        tk.Label(self.frames['Generate Password'], text="Capital letters to exclude:", **self.label_style).grid(row=5, column=0, sticky=tk.E, pady=5)
+        tk.Entry(self.frames['Generate Password'], textvariable=self.capitals_var, **self.entry_style).grid(row=5, column=1, pady=5)
+
+        self.result_text = tk.Text(self.frames['Generate Password'], height=5, width=30, wrap=tk.WORD, **self.entry_style)
+
+        self.result_text.grid(row=6, column=0, columnspan=2, pady=10)
+
+        tk.Button(self.frames['Generate Password'], text="Generate Password", command=self.generate_passwords, **self.button_style).grid(row=7, column=0, columnspan=2, pady=10)
+
+    def generate_passwords(self):
+        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!$%^&*()_+-=[]{}|;:,.<>/?~'
+        number = int(self.amount_var.get())
+        length = int(self.length_var.get())
+        special = self.special_var.get()
+        numbers = self.numbers_var.get()
+        lowercase = self.lowercase_var.get()
+        capitals = self.capitals_var.get()
+
+        passwords = []
+
+        for _ in range(number):
             password = ''
-            for pwd in range(length):
+            for _ in range(length):
                 char = random.choice(chars)
                 if char not in special and char not in numbers and char not in lowercase and char not in capitals:
                     password += char
-            print(password)
-        pass
+            passwords.append(password)
+
+        self.result_text.delete(1.0, tk.END)
+        self.result_text.insert(tk.END, "\n".join(passwords))
+
 
     def create_personal_information_frame(self):
         
@@ -152,10 +180,10 @@ class DataManagementSystem:
         
         self.saved_logins[domain] = {'Username': username, 'Password': password}
 
-       
+        
         messagebox.showinfo("Saved", "Login information saved successfully.")
 
-        
+       
         self.save_data_to_file()
 
 
