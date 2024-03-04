@@ -151,16 +151,6 @@ personal_information_selection()
 handel_user_options()
 
 
-# --- NOTES --- # 
-# ~ When users generate a new password give them the option to save it 
-# ~ Give users the option to test the strength of their password
-# ~ Make into chrome extension
-# ~ With chrome extension make it so users can save the password through there 
-# ~ Automatic fill in 
-# ~ If password is hacked alert user
-# ~ Add donation option
-# ~ Add in option for users to delete everything of one subject from there generated password (e.g. characters, numbers, upper/lowercase letter)
-# ~ Add option where there will be a prompt if the user enters a special character on accident 
-# ~ Add encryption method
+
 
 
