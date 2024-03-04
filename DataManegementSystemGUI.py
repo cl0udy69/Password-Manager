@@ -10,24 +10,24 @@ class DataManagementSystem:
         self.root = root
         self.root.title("Dorian's Data System")
 
-        # Variables for user input
+    
         self.domain_var = tk.StringVar()
         self.username_var = tk.StringVar()
         self.password_var = tk.StringVar()
 
-        # Existing saved data
+        
         self.saved_logins = {}
         self.saved_address = {}
         self.saved_banking_info = {}
 
-        # Load saved data from file
+        
         self.load_data_from_file()
 
-        # Create frames for different options
+        
         self.frames = {}
         self.create_frames()
 
-        # Widgets
+        
         self.create_widgets()
 
     entry_style = {'font': ('Arial', 12), 'bg': 'white', 'width': 20}
@@ -52,12 +52,12 @@ class DataManagementSystem:
             json.dump(data_to_save, file)
 
     def create_frames(self):
-        # Create frames for different options
+        
         for option in ['Save Login', 'Generate Password', 'Save Personal Information', 'Save Banking Info', 'See All Saved Logins', 'See All saved Address\'s', 'See All Saved Banking Information', 'See All Saved Data']:
             self.frames[option] = tk.Frame(self.root)
 
     def create_widgets(self):
-        # Styling
+       
         self.root.geometry("400x300")
         self.root.configure(bg="#f0f0f0")
 
@@ -65,28 +65,28 @@ class DataManagementSystem:
         button_style = {'font': ('Montserrat', 12), 'bg': '#4CAF50', 'fg': 'white', 'width': 15, 'height': 1}
 
 
-        # Labels
+     
         tk.Label(self.root, text="Select an option:", **label_style).pack(pady=10)
 
-        # Buttons for different options
+  
         options = ['Save Login', 'Generate Password', 'Save Personal Information', 'Save Banking Info', 'See All Saved Data']
         for option in options:
             tk.Button(self.root, text=option, command=lambda o=option: self.show_frame(o), **button_style).pack(pady=5)
 
-        # Place frames
+ 
         for frame in self.frames.values():
             frame.pack_forget()
 
-        # Initial frame to show
+      
         self.show_frame('Save Login')
 
     def show_frame(self, option):
-        # Show the selected frame
+
         for frame in self.frames.values():
             frame.pack_forget()
         self.frames[option].pack(fill=tk.BOTH, expand=True)
 
-        # Handle specific frame content
+      
         if option == 'Save Login':
             self.create_save_login_frame()
         elif option == 'Generate Password':
@@ -135,19 +135,19 @@ class DataManagementSystem:
         pass
 
     def save_address_frame(self):
-        # Your existing personal information code goes here
+      
         pass
 
     def save_banking_info_frame(self):
-        # Your existing banking info code goes here
+        
         pass
 
     def see_saved_logins(self):
-        # Your existing see all data code goes here
+      
         pass
 
     def see_saved_address(self):
-        # Your Existing see saved address code goes here
+      
         pass
 
     def save_login(self):
@@ -155,13 +155,13 @@ class DataManagementSystem:
         username = self.username_var.get()
         password = self.password_var.get()
 
-        # Your existing code to save login information
+  
         self.saved_logins[domain] = {'Username': username, 'Password': password}
 
-        # Inform the user
+      
         messagebox.showinfo("Saved", "Login information saved successfully.")
 
-        # Save data to file
+
         self.save_data_to_file()
 
 
