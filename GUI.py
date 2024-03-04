@@ -1,18 +1,24 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import ttk, messagebox, simpledialog
 import json
 import os
 import random
-import sys
 
 class DataManagementSystem:
     def __init__(self, root):
         self.root = root
         self.root.title("Dorian's Data System")
-       
+
         self.domain_var = tk.StringVar()
         self.username_var = tk.StringVar()
         self.password_var = tk.StringVar()
+
+        self.amount_var = tk.StringVar()
+        self.length_var = tk.StringVar()
+        self.special_var = tk.StringVar()
+        self.numbers_var = tk.StringVar()
+        self.lowercase_var = tk.StringVar()
+        self.capitals_var = tk.StringVar()
 
         self.saved_logins = {}
         self.saved_address = {}
@@ -20,12 +26,16 @@ class DataManagementSystem:
 
         self.load_data_from_file()
 
-        self.frames = {}
-        self.create_frames()
+        self.content_frame = ttk.Frame(self.root, style='TFrame')
+        self.content_frame.pack(fill=tk.BOTH, expand=True)
 
-        self.create_widgets()
+        self.style = ttk.Style()
+        self.style.configure('TFrame', background='#2C3E50')  
+        self.style.configure('TLabel', background='#2C3E50', foreground='white', font=('Helvetica', 14, 'bold'))
+        self.style.configure('TEntry', background='#B74343', font=('Arial', 12), foreground='black', padding=10)
+        self.style.configure('TButton', background='#B74343', foreground='black', font=('Helvetica', 14, 'bold'))
 
-    entry_style = {'font': ('Arial', 12), 'bg': 'white', 'width': 20}
+        self.show_main_menu()
 
     def load_data_from_file(self):
         DATA_FILE = 'save_data.json'
@@ -46,114 +56,73 @@ class DataManagementSystem:
         with open(DATA_FILE, 'w') as file:
             json.dump(data_to_save, file)
 
-    def create_frames(self):
-        for option in ['Save Login', 'Generate Password', 'Save Personal Information', 'Save Banking Info', 'See All Saved Logins', 'See All saved Address\'s', 'See All Saved Banking Information', 'See All Saved Data']:
-            self.frames[option] = tk.Frame(self.root)
+    def show_main_menu(self):
 
-    def create_widgets(self):
-        self.root.geometry("400x300")
-        self.root.configure(bg="#f0f0f0")
+        self.clear_content()
 
-        label_style = {'font': ('Montserrat', 12), 'bg': '#f0f0f0'}
-        button_style = {'font': ('Montserrat', 12), 'bg': '#4CAF50', 'fg': 'white', 'width': 15, 'height': 1}
-
-
-        tk.Label(self.root, text="Select an option:", **label_style).pack(pady=10)
+        ttk.Label(self.content_frame, text="Select an option:", style='TLabel').pack(pady=20)
 
         options = ['Save Login', 'Generate Password', 'Save Personal Information', 'Save Banking Info', 'See All Saved Data']
         for option in options:
-            tk.Button(self.root, text=option, command=lambda o=option: self.show_frame(o), **button_style).pack(pady=5)
+            ttk.Button(self.content_frame, text=option, command=lambda o=option: self.show_content(o), style='TButton').pack(pady=15)
 
-        for frame in self.frames.values():
-            frame.pack_forget()
+    def show_content(self, option):
+        
+        self.clear_content()
 
-        self.show_frame('Save Login')
-
-    def show_frame(self, option):
-        for frame in self.frames.values():
-            frame.pack_forget()
-        self.frames[option].pack(fill=tk.BOTH, expand=True)
+        ttk.Button(self.content_frame, text="Back", command=self.show_main_menu, style='TButton').pack(pady=20)
 
         if option == 'Save Login':
-            self.create_save_login_frame()
+            self.show_save_login_content()
         elif option == 'Generate Password':
-            self.create_generate_password_frame()
-        elif option == 'Save Address':
-            self.save_address_frame()
+            self.show_generate_password_content()
+        elif option == 'Save Personal Information':
+            self.show_personal_information_content()
         elif option == 'Save Banking Info':
-            self.save_banking_info_frame()
-        elif option == 'See Saved Logins':
-            self.see_saved_logins()
-        elif option == 'See saved address':
-            self.see_saved_address()
+            self.show_banking_info_content()
+        elif option == 'See All Saved Data':
+            self.show_see_all_data_content()
 
-    def create_save_login_frame(self):
-        print('Enter the login you would like to save:')
-        domain = input('What domain does the login belong to? (e.g. Google, Facebook, Spotify, Steam): ')
-        username = input('Username/Email: ')
-        password = input('Password: ')
+    def show_save_login_content(self):
+        ttk.Label(self.content_frame, text="Domain:", style='TLabel').pack(pady=10)
+        ttk.Entry(self.content_frame, textvariable=self.domain_var, style='TEntry').pack(pady=5)
+        ttk.Label(self.content_frame, text="Username/Email:", style='TLabel').pack(pady=10)
+        ttk.Entry(self.content_frame, textvariable=self.username_var, style='TEntry').pack(pady=5)
+        ttk.Label(self.content_frame, text="Password:", style='TLabel').pack(pady=10)
+        ttk.Button(self.content_frame, text="Enter Password", command=self.enter_password, style='TButton').pack(pady=20)
+        ttk.Button(self.content_frame, text="Save Login", command=self.save_login, style='TButton').pack(pady=30)
 
-        self.saved_logins[domain] = {'Username': username, 'Password': password}
+    def show_generate_password_content(self):
+        ttk.Label(self.content_frame, text="Amount of passwords:", style='TLabel').pack(pady=10)
+        ttk.Entry(self.content_frame, textvariable=self.amount_var, style='TEntry').pack(pady=5)
+        ttk.Label(self.content_frame, text="Length of password:", style='TLabel').pack(pady=10)
+        ttk.Entry(self.content_frame, textvariable=self.length_var, style='TEntry').pack(pady=5)
+        ttk.Label(self.content_frame, text="Special characters to exclude:", style='TLabel').pack(pady=10)
+        ttk.Entry(self.content_frame, textvariable=self.special_var, style='TEntry').pack(pady=5)
+        ttk.Label(self.content_frame, text="Numbers to exclude:", style='TLabel').pack(pady=10)
+        ttk.Entry(self.content_frame, textvariable=self.numbers_var, style='TEntry').pack(pady=5)
+        ttk.Label(self.content_frame, text="Lowercase letters to exclude:", style='TLabel').pack(pady=10)
+        ttk.Entry(self.content_frame, textvariable=self.lowercase_var, style='TEntry').pack(pady=5)
+        ttk.Label(self.content_frame, text="Capital letters to exclude:", style='TLabel').pack(pady=10)
 
-        tk.Label(self.frames['Save Login'], text="Domain:", **self.label_style).grid(row=0, column=0, sticky=tk.E, pady=5)
-        tk.Entry(self.frames['Save Login'], textvariable=self.domain_var, **self.entry_style).grid(row=0, column=1, pady=5)
-        tk.Label(self.frames['Save Login'], text="Username/Email:", **self.label_style).grid(row=1, column=0, sticky=tk.E, pady=5)
-        tk.Entry(self.frames['Save Login'], textvariable=self.username_var, **self.entry_style).grid(row=1, column=1, pady=5)
-        tk.Label(self.frames['Save Login'], text="Password:", **self.label_style).grid(row=2, column=0, sticky=tk.E, pady=5)
-        tk.Entry(self.frames['Save Login'], textvariable=self.password_var, show='*', **self.entry_style).grid(row=2, column=1, pady=5)
-        tk.Button(self.frames['Save Login'], text="Save Login", command=self.save_login, **self.button_style).grid(row=3, column=0, columnspan=2, pady=10)
+        self.result_text = tk.Text(self.content_frame, height=5, width=30, wrap=tk.WORD, font=('Arial', 12), bg='#B74343', fg='black')
+        self.result_text.pack(pady=20)
+        ttk.Button(self.content_frame, text="Generate Password", command=self.generate_passwords, style='TButton').pack(pady=30)
 
-    def create_generate_password_frame(self):
-        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!$%^&*()_+-=[]{}|;:,.<>/?~'
-        number = int(input('Amount of passwords: '))
-        length = int(input('Length of password: '))
-        special = input('What special characters would you like to delete: ')
-        numbers = input('What numbers would you like to delete: ')
-        lowercase = input('What lowercase letters would you like to delete: ')
-        capitals = input('What capital letters would you like to delete: ')
+    def enter_password(self):
+        password = simpledialog.askstring("Password Entry", "Enter Password:", show='*')
+        self.password_var.set(password)
 
-        for pwd in range(number):  
-            password = ''
-            for pwd in range(length):
-                char = random.choice(chars)
-                if char not in special and char not in numbers and char not in lowercase and char not in capitals:
-                    password += char
-            print(password)
+    def show_personal_information_content(self):
+
         pass
 
-    def save_address_frame(self):
-        address = input('Street Adress: ')
-        state = input('State/province: ')
-        city = input('City: ')
-        zipcode = input('Zipcode: ')
-        aptnumber = input('Apartment Number: ')
-
-        self.saved_address[address] = {'state': state, 'city': city, 'zipcode': zipcode, 'aptnumber': aptnumber}
+    def show_banking_info_content(self):
+        
         pass
 
-    def save_banking_info_frame(self):
-        issuer = input('Card Issuer: ')
-        name = input('Card Name: ')
-        networks = input('Card Network: ')
-        account_opening = ('Date of account opening: ')
-        experiation = input('Experiation Date: ')
-        cardholder_name = input ('Cardholder Name: ')
-        number = input('Credit Card Number: ')
-        cvv = input('CVV (the three digits on the back of the card): ')
-
-        self.saved_banking_info[issuer] = {'name': name, 'networks': networks, 'account_opening': account_opening, 'experiation': experiation, 'cardholder_name': cardholder_name, 'number': number,  'cvv': cvv}
-        pass
-
-    def see_saved_logins(self):
-        if not self.saved_logins:
-            print('No saved logins')
-        else:
-            print('Saved Logins')
-            for domain, login_info in self.saved_logins.items():
-                print(f'Street Address: {login_info["Street Address"]}, State: {login_info["State/province"]}, City: {login_info["City"]}, Zipcode: {login_info["Zipcode"]}, Apartment Number: {login_info["Apartment Number"]}')
-        pass
-
-    def see_saved_address(self):
+    def show_see_all_data_content(self):
+        
         pass
 
     def save_login(self):
@@ -167,8 +136,37 @@ class DataManagementSystem:
 
         self.save_data_to_file()
 
+        self.show_main_menu()
+
+    def clear_content(self):
+        
+        for widget in self.content_frame.winfo_children():
+            widget.destroy()
+
+    def generate_passwords(self):
+        chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!$%^&*()_+-=[]{}|;:,.<>/?~'
+        number = int(self.amount_var.get())
+        length = int(self.length_var.get())
+        special = self.special_var.get()
+        numbers = self.numbers_var.get()
+        lowercase = self.lowercase_var.get()
+        capitals = self.capitals_var.get()
+
+        passwords = []
+
+        for _ in range(number):
+            password = ''
+            for _ in range(length):
+                char = random.choice(chars)
+                if char not in special and char not in numbers and char not in lowercase and char not in capitals:
+                    password += char
+            passwords.append(password)
+
+        self.result_text.delete(1.0, tk.END)
+        self.result_text.insert(tk.END, "\n".join(passwords))
 
 if __name__ == "__main__":
     root = tk.Tk()
     app = DataManagementSystem(root)
+    root.geometry("800x600")
     root.mainloop()
