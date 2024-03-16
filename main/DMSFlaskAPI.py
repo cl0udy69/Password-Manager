@@ -46,16 +46,7 @@ def save_login():
 
     return jsonify({'message': 'Login saved successfully'})
 
-# Add similar routes for other functionalities
+
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-# http://localhost:5000/save_login
-
-#This is a basic example, and you'll need to expand it for other functionalities like saving personal information, generating passwords, etc. You can create additional routes for each functionality, and the API can be accessed via HTTP requests.
-
-#For example, to save a login, you can send a POST request to http://localhost:5000/save_login with JSON data containing the domain, username, and password.
-
-#Remember to replace the code in the original functions with the appropriate Flask routes and logic.
