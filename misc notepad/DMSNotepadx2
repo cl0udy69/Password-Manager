@@ -72,6 +72,8 @@ user_choices = {
   'delete_ethnicity_choices' : ['3', 'three', 'Three', 'Delete Ethnicity', 'Delete ethnicity', 'delete ethnicity'],
 }
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
 def personal_information_selection():
     print('Address\'s')
     print('Banking Information')
@@ -138,7 +140,7 @@ def banking_selection():
         see_banking()
     else:
         print('Invalid Choice')
-        banking_selectio()
+        banking_selection()
 
 def ssn_selection():
     ssn_choices = input('Would you like to save, view, or delete?: ')
@@ -289,9 +291,34 @@ def ethnicity_selection():
     else:
         print('Invalid Choice')
         ethnicity_selection()
+        
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
+def save_address():
+    address = input('Street Adress: ')
+    state = input('State/province: ')
+    city = input('City: ')
+    zipcode = input('Zipcode: ')
+    aptnumber = input('Apartment Number: ')
 
+    save_address[address] = {'state': state, 'city': city, 'zipcode': zipcode, 'aptnumber': aptnumber}
+    
+def save_banking():
+    bank = input('Bank: ')
+    account = input('Account: ')
+    routing = input('Routing: ')
 
+    save_banking[bank] = {'account': account, 'routing': routing}
+    
+def save_ssn():
+    ssn = input('Social Security Number: ')
 
+    save_ssn[ssn] = {'ssn': ssn}
+    
+def save_phone_number():
+    phone = input('Phone Number: ')
+
+    save_phone_number[phone] = {'phone': phone}
+    
 
 personal_information_selection()
