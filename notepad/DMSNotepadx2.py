@@ -5,17 +5,18 @@ user_choices = {
   'phone_number_choices' : ['4', 'four', 'Four', 'Phone Number Information', 'Phone number information', 'phone number information', 'Phone Number Info', 'Phone number info', 'phone number info', 'Phone Number', 'Phone number', 'phone number'],
   'login_choices' : ['5', 'five', 'Five', 'Login Information', 'Login information', 'login information', 'Login Info', 'Login info', 'login infop', 'Login', 'login'],
   'email_choices' : ['6', 'six', 'Six', 'Email Information', 'Email information', 'email information', 'Email Info', 'Email info', 'email info', 'Email', 'email'],
-  'birth_choices' : ['7', 'seven', 'Seven', 'Birthday Information', 'Birthday information', 'birthday information', 'Birthday Info', 'Birthday info', 'birthday info', 'Birthday', 'birthday', 'Date of Birth', 'Date of birth', 'date of birth', 'Birth', 'birth'],
-  'gender_choices' : ['8', 'eight', 'Eight', 'Gender Information', 'Gender information', 'gender information', 'Gender Info', 'Gender info', 'gender info', 'Gender', 'gender'],
-  'nationality_choices' : ['9', 'nine', 'Nine', 'Nationality Information', 'Nationality information', 'nationality information', 'Nationality Info', 'Nationality info', 'nationality info', 'Nationality', 'nationality'],               
-  'occupation_choices' : ['10', 'ten', 'Ten', 'Occupation Information', 'Occupation information', 'occupation information', 'Occupation Info', 'Occupation info', 'occupation info', 'Job Information', 'Job information', 'job information', 'Job Info', 'Job info', 'job info', 'Occupation', 'occupation', 'Job', 'job'],
-  'education_choices' : ['11', 'eleven', 'Eleven', 'Education Information', 'Education information', 'education information', 'Education Info', 'Education info', 'education info', 'Education', 'education'],
-  'medical_choices' : ['12', 'twelve', 'Twelve', 'Medical Information', 'Medical information', 'medical information', 'Medical', 'medical'],
-  'insurance_choices' : ['13', 'thirteen', 'Thirteen', 'Insurance Information', 'Insurance information', 'insurance information', 'Insurance', 'insurance'], 
-  'driving_choices' : ['14', 'fourteen', 'Fourteen', 'Drivers License', 'Drivers license', 'drivers license', 'Driving Information', 'Driving information', 'driving information', 'Driving', 'driving'],
-  'passport_choices' : ['15', 'fifteen', 'Fifteen', 'Passport Information', 'Passport information', 'passport information', 'Passport Info', 'Passport info', 'passport info', 'Passport', 'passport'],
-  'legal_choices' : ['16', 'sixteen', 'Sixteen', 'Legal Information', 'Legal information', 'legal information', 'Legal Info', 'Legal info', 'legal info', 'Legal', 'legal'],
-  'ethnicity_choices' : ['17', 'seventeen', 'Seventeen', 'Ethnicity Information', 'Ethnicity information', 'ethnicity information', 'Ethnicity Info', 'Ethnicity info', 'ethnicity info', 'Ethnicity', 'ethnicity'],
+  'password_choices' : ['7', 'seven', 'Seven', 'Password', 'password', 'Password Information', 'Password information', 'password information', 'Password Info', 'Password info', 'password info'],
+  'birth_choices' : ['', 'Birthday Information', 'Birthday information', 'birthday information', 'Birthday Info', 'Birthday info', 'birthday info', 'Birthday', 'birthday', 'Date of Birth', 'Date of birth', 'date of birth', 'Birth', 'birth'],
+  'gender_choices' : ['', 'Gender Information', 'Gender information', 'gender information', 'Gender Info', 'Gender info', 'gender info', 'Gender', 'gender'],
+  'nationality_choices' : ['', 'Nationality Information', 'Nationality information', 'nationality information', 'Nationality Info', 'Nationality info', 'nationality info', 'Nationality', 'nationality'],               
+  'occupation_choices' : ['', 'Occupation Information', 'Occupation information', 'occupation information', 'Occupation Info', 'Occupation info', 'occupation info', 'Job Information', 'Job information', 'job information', 'Job Info', 'Job info', 'job info', 'Occupation', 'occupation', 'Job', 'job'],
+  'education_choices' : ['', 'Education Information', 'Education information', 'education information', 'Education Info', 'Education info', 'education info', 'Education', 'education'],
+  'medical_choices' : ['', 'Medical Information', 'Medical information', 'medical information', 'Medical Info', 'Medical info', 'medical info', 'Medical', 'medical'],
+  'insurance_choices' : ['', 'Insurance Information', 'Insurance information', 'insurance information', 'Insurance Info', 'Insurance info', 'insurance info', 'Insurance', 'insurance'], 
+  'driving_choices' : ['', 'Drivers License', 'Drivers license', 'drivers license', 'Driving Information', 'Driving information', 'driving information', 'Driving Info', 'Driving info', 'driving info', 'Driving', 'driving'],
+  'passport_choices' : ['', 'Passport Information', 'Passport information', 'passport information', 'Passport Info', 'Passport info', 'passport info', 'Passport', 'passport'],
+  'legal_choices' : ['', 'Legal Information', 'Legal information', 'legal information', 'Legal Info', 'Legal info', 'legal info', 'Legal', 'legal'],
+  'ethnicity_choices' : ['', 'Ethnicity Information', 'Ethnicity information', 'ethnicity information', 'Ethnicity Info', 'Ethnicity info', 'ethnicity info', 'Ethnicity', 'ethnicity'],
 
   'save_address_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Address', 'Save address', 'save address', 'Save Billing Address', 'Save billing address', 'save billing address'],
   'save_banking_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Banking Information', 'Save banking information', 'save banking information', 'Save Banking Info', 'Save banking info', 'save banking info'],
@@ -23,6 +24,7 @@ user_choices = {
   'save_phone_number_choices' : ['1', 'one', 'Save', 'save', 'One', 'Save Phone Number', 'Save phone number', 'save phone number', 'Save Number', 'Save number', 'save number'],
   'save_login_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Login', 'Save login', 'save login'],
   'save_email_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Email', 'Save email', 'save email'],  
+  'save_password_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Password', 'Save password', 'save password'],
   'save_birth_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Birthday', 'Save birthday', 'save birthday', 'Save Date of Birth', 'Save date of birth', 'save date of birth'],
   'save_gender_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Gender', 'Save gender', 'save gender'],
   'save_nationality_choices' : ['1', 'one', 'One', 'Save', 'save', 'Save Nationality', 'Save nationality', 'save nationality'],
@@ -41,6 +43,7 @@ user_choices = {
   'see_phone_number_choices' : ['2', 'two', 'Two', 'See', 'see', 'View', 'view','See Saved Phone Number', 'See saved phone number', 'see saved phone number', 'See Phone Number', 'See phone number', 'see phone number', 'See Saved Number', 'See saved number', 'see saved number', 'See Number', 'See number', 'see number', 'View Saved Phone Number', 'View saved phone number', 'view saved phone number', 'View Saved Number', 'View saved number', 'view saved number', 'View Phone Number', 'View phone number', 'view phone number', 'View Number', 'View number', 'view number'],
   'see_login_choices' : ['2', 'two', 'Two', 'See', 'see', 'View', 'view', 'See Saved Login', 'See saved login', 'see saved login', 'See Saved logins', 'See saved logins', 'see saved logins', 'See Login', 'See login', 'see login', 'See Logins', 'See logins', 'see logins', 'View Saved Login', 'View saved login', 'view saved login', 'View Saved Logins', 'View saved logins', 'view saved logins', 'View Login', 'View login', 'view login', 'View Logins', 'View logins', 'view logins'],
   'see_email_choices' : ['2', 'two', 'Two', 'See', 'see', 'View', 'view', 'See Saved Email', 'See saved email', 'see saved email', 'See Email', 'See email', 'see email', 'View Saved Email', 'View saved email', 'view saved email', 'View Email', 'View email', 'view email'],
+  'see_password-Choices' : ['2', 'two', 'Two', 'See', 'see', 'View', 'view', 'See Saved Password', 'See saved password', 'see saved password', 'See Password', 'See password', 'see password', 'View Saved Password', 'View saved password', 'view saved password', 'View Password', 'View password', 'view password'],
   'see_birth_choices' : ['2', 'two', 'Two', 'See', 'see', 'View', 'view', 'See Saved Birthday', 'See saved birthday', 'see saved birthday', 'See Saved Date of Birth', 'See saved date of birth', 'see saved date of birth', 'See Birthday', 'See birthday', 'see birthday', 'See Date of Birth', 'See date of birth', 'see date of birth', 'View Saved Birthday', 'View saved birthday', 'view saved birthday', 'View Saved Date of Birth', 'View saved date of birth', 'view saved date of birth', 'View Birthday', 'View birthday', 'view birthday', 'View Date of Birth', 'View date of birth', 'view date of birth'],
   'see_gender_choices' : ['2', 'two', 'Two', 'See', 'see', 'View', 'view', 'See Saved Gender', 'See saved gender', 'see saved gender', 'See Gender', 'See gender', 'see gender', 'View Saved Gender', 'View saved gender', 'view saved gender', 'View Gender', 'View gender', 'view gender'],
   'see_nationality_choices' : ['2', 'two', 'Two', 'See', 'see', 'View', 'view', 'See Saved Nationality', 'See saved nationality', 'see saved nationality', 'See Nationality', 'See nationality', 'see nationality', 'View Saved Nationality', 'View saved nationality', 'view saved nationality', 'View Nationality', 'View nationality', 'view nationality'],
@@ -59,39 +62,42 @@ user_choices = {
   'delete_phone_number_choices' : ['3', 'three', 'Three', 'Delete Phone Number', 'Delete phone number', 'delete phone number', 'Delete Saved Phone Number', 'Delete saved phone number', 'delete saved phone number', 'Delete Number', 'Delete number', 'delete number', 'Delete Saved Number', 'Delete saved number', 'delete saved number'],
   'delete_login_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Login', 'Delete login', 'delete login', 'Delete Saved Login', 'Delete saved login', 'delete saved login', 'Delete Logins', 'Delete logins', 'delete logins', 'Delete Saved Logins', 'Delete saved logins', 'delete saved logins'],
   'delete_email_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Email', 'Delete email', 'delete email', 'Delete Saved Email', 'Delete saved email', 'delete saved email', ''],
+  'delet_password_choices' : ['3', 'three', 'Three', 'Delete', 'delete', 'Delete Password', 'Delete password', 'delete password', 'Delete Saved Password', 'Delete saved password', 'delete saved password'],
   'delete_birth_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Birthday', 'Delete birthday' 'delete birthday', 'Delete Date of Birth', 'Delete date of birth', 'delete date of birth', 'Delete Saved Birthday', 'Delete saved birthday', 'delete saved birthday', 'Delete Saved Date of Birth', 'Delete saved date of birth', 'delete saved date of birth'],
-  'delete_gender_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Gender', 'Delete gender', 'delete gender'],
-  'delete_nationality_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Nationality', 'Delete nationality', 'delete nationality'],
-  'delete_occupation_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Occupation', 'Delete occupation', 'delete occupation', 'Delete Job', 'Delete job', 'delete job'],
-  'delete_education_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Education', 'Delete education', 'delete education'],
-  'delete_medical_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Medical Information', 'Delete medical information', 'delete medical information'],
-  'delete_insurance_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Insurance Information', 'Delete insurance information', 'delete insurance information', 'Delete Insurance Info', 'Delete insurance info', 'delete insurance info', 'Delete Insurance', 'Delete insurance', 'delete insurance'],
-  'delete_driving_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Drivers Lisence', 'Delete drivers lisence', 'delete drivers lisence', 'Delete Driving Information', 'Delete driving information', 'delete driving information', 'Delete Driving Info', 'Delete driving info' , 'delete driving info'],
-  'delete_passport_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Passport', 'Delete passport', 'delete passport'],
-  'delete_legal_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Legal Information', 'Delete legal information', 'delete legal information', 'Delete Legal Info', 'Delete legal info', 'delete legal info'],
-  'delete_ethnicity_choices' : ['3', 'three', 'Three', 'Delete Ethnicity', 'Delete ethnicity', 'delete ethnicity'],
+  'delete_gender_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Gender', 'Delete gender', 'delete gender', 'Delete Saved Gender', 'Delete saved gender', 'delete saved gender'],
+  'delete_nationality_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Nationality', 'Delete nationality', 'delete nationality', 'Delete Saved Nationality', 'Delete saved nationality', 'delete saved nationality'],
+  'delete_occupation_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Occupation', 'Delete occupation', 'delete occupation', 'Delete Job', 'Delete job', 'delete job', 'Delete Saved Job', 'Delete saved job', 'delete saved job'],
+  'delete_education_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Education', 'Delete education', 'delete education', 'Delete Saved Education', 'Delete saved education', 'delete saved education'],
+  'delete_medical_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Medical Information', 'Delete medical information', 'delete medical information', 'Delete Medical Info', 'Delete medical info', 'delete medical info', 'Delete Saved Medical Information', 'Delete saved medical information', 'delete saved medical information', 'Delete Saved Medical Info', 'Delete saved medical info', 'delete saved medical info'],
+  'delete_insurance_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Insurance Information', 'Delete insurance information', 'delete insurance information', 'Delete Insurance Info', 'Delete insurance info', 'delete insurance info', 'Delete Insurance', 'Delete insurance', 'delete insurance', 'Delete Saved Insurance Information', 'Delete saved insurance information', 'delete saved insurance information', 'Delete Saved Insurance Info', 'Delete saved insurance info', 'delete saved insurance info', 'Delete Saved Insurance', 'Delete saved insurance', 'delete saved insurance'],
+  'delete_driving_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Drivers Lisence', 'Delete drivers lisence', 'delete drivers lisence', 'Delete Driving Information', 'Delete driving information', 'delete driving information', 'Delete Driving Info', 'Delete driving info' , 'delete driving info', 'Delete Saved Drivers Lisence', 'Delete saved drivers lisence', 'delete saved drivers lisence', 'Delete Saved Driving Information', 'Delete saved driving information', 'delete saved driving information', 'Delete Saved Driving Info', 'Delete saved driving info', 'delete saved driving info'],
+  'delete_passport_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Passport', 'Delete passport', 'delete passport', 'Delete Saved Passport', 'Delete saved passport', 'delete saved passport'],
+  'delete_legal_choices' : ['3', 'three', 'Three', 'delete', 'Delete', 'Delete Legal Information', 'Delete legal information', 'delete legal information', 'Delete Legal Info', 'Delete legal info', 'delete legal info', 'Delete Saved Legal Information', 'Delete saved legal information', 'delete saved legal information', 'Delete Saved Legal Info', 'Delete saved legal info', 'delete saved legal info'],
+  'delete_ethnicity_choices' : ['3', 'three', 'Three', 'Delete Ethnicity', 'Delete ethnicity', 'delete ethnicity', 'Delete Saved Ethnicity', 'Delete saved ethnicity', 'delete saved ethnicity'],
 }
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
 def personal_information_selection():
-    print('Choose one of the following options:')
-    print('1. Address')
-    print('2. Banking Information')
-    print('3. Social Security Number')
-    print('4. Phone Number')
-    print('5. Login')
-    print('6. Email')
-    print('7. Date of Birth')
-    print('8. Gender')
-    print('9. Nationality')
-    print('10. Occupation')
-    print('11. Education')
-    print('12. Medical Information')
-    print('13. Insurance Information')
-    print('14. Driving Information')
-    print('15. Legal Information')
-    print('16. Ethnicity')
-    
-    user_selection = input('Enter your choice: ')
+    print('Address\'s')
+    print('Banking Information')
+    print('Social Security Number')
+    print('Phone Number')
+    print('Login')
+    print('Email')
+    print('Password')
+    print('Date of Birth')
+    print('Gender')
+    print('Nationality')
+    print('Occupation')
+    print('Education')
+    print('Medical Information')
+    print('Insurance Information')
+    print('Driving Information')
+    print('legal Information')
+    print('Ethnicity')
+
+    user_selection = input('Choose one of the following options: ')
 
     selection_functions = {
     'address_choices' : address_selection,
@@ -100,6 +106,7 @@ def personal_information_selection():
     'phone_number_choices' : phone_number_selection,
     'login_choices' : login_selection,
     'email_choices' : email_selection,
+    'password_choices' : password_selection,
     'birth_choices' : birth_selection,
     'gender_choices' : gender_selection,
     'nationality_choices' : nationality_selection,
@@ -127,6 +134,9 @@ def address_selection():
         save_address()
     elif address_choices.lower() in user_choices['see_address_choices']:
         see_address()
+    else:
+        print('Invalid Choice')
+        address_selection()
 
 def banking_selection():
     banking_choices = input('Would you like to save, view, or delete?: ')
@@ -134,6 +144,9 @@ def banking_selection():
         save_banking()
     elif banking_choices.lower() in user_choices['see_banking_choices']:
         see_banking()
+    else:
+        print('Invalid Choice')
+        banking_selection()
 
 def ssn_selection():
     ssn_choices = input('Would you like to save, view, or delete?: ')
@@ -141,6 +154,9 @@ def ssn_selection():
         save_ssn()
     elif ssn_choices.lower() in user_choices['see_ssn_choices']:
         see_ssn()
+    else:
+        print('Invalid Choice')
+        ssn_selection()
 
 def phone_number_selection():
     phone_number_choices = input('Would you like to save, view, or delete?: ')
@@ -148,6 +164,9 @@ def phone_number_selection():
         save_phone_number()
     elif phone_number_choices.lower() in user_choices['see_phone_number_choices']:
         see_phone_number()
+    else:
+        print('Invalid Choice')
+        phone_number_selection()
 
 def login_selection():
     login_choices = input('Would you like to save, view, or delete?: ')
@@ -155,6 +174,9 @@ def login_selection():
         save_login()
     elif login_choices.lower() in user_choices['see_login_choices']:
         see_login()
+    else:
+        print('Invalid Choice')
+        login_selection()
 
 def email_selection():
     email_choices = input('Would you like to save, view, or delete?: ')
@@ -162,6 +184,19 @@ def email_selection():
         save_email()
     elif email_choices.lower() in user_choices['see_email_choices']:
         see_email()
+    else:
+        print('Invalid Choice')
+        email_selection()
+        
+def password_selection():
+    password_choices = input('Would you like to save, view, or delete?: ')
+    if password_choices.lower() in user_choices['save_password_choices']:
+        save_password()
+    elif password_choices.lower() in user_choices['see_password_choices']:
+        see_password()
+    else:
+        print('Invalid Choice')
+        password_selection()
 
 def birth_selection():
     birth_choices = input('Would you like to save, view, or delete?: ')
@@ -169,6 +204,9 @@ def birth_selection():
         save_birth()
     elif birth_choices.lower() in user_choices['see_birth_choices']:
         see_birth()
+    else:
+        print('Invalid Choice')
+        birth_selection()
 
 def gender_selection():
     gender_choices = input('Would you likle to save, view, or delete?: ')
@@ -176,6 +214,9 @@ def gender_selection():
         save_gender()
     elif gender_choices.lower() in user_choices['see_gender_choices']:
         see_gender()
+    else:
+        print('Invalid Choice')
+        gender_selection()
 
 def nationality_selection():
     nationality_choices = input('Would you like to save, view, or delete?: ')
@@ -183,6 +224,9 @@ def nationality_selection():
         save_nationality()
     elif nationality_choices.lower() in user_choices['see_nationality_choices']:
         see_nationality
+    else:
+        print('Invalid Choice')
+        nationality_selection()
 
 def occupation_selection():
     occupation_choices = input('Would you like to save, view, or delete?: ')
@@ -190,13 +234,19 @@ def occupation_selection():
         save_occupation()
     elif occupation_choices.lower() in user_choices['see_occupation_choices']:
         see_occupation()
-        
+    else:
+        print('Invalid Choice')
+        occupation_selection()
+
 def education_selection():
     education_choices = input('Would you like to save, view, or delete?: ')
     if education_choices.lower() in user_choices['save_education_choices']:
         save_education()
     elif education_choices.lower() in user_choices['see_education_choices']:
         see_education()
+    else:
+        print('Invalid Choice')
+        education_selection()
 
 def medical_selection():
     medical_choices = input('Would you like to save, view, or delete?: ')
@@ -204,45 +254,118 @@ def medical_selection():
         save_medical()
     elif medical_choices.lower() in user_choices['see_medical_choices']:
         see_medical()
-        
+    else:
+        print('Invalid Choice')
+        medical_selection()
+
 def insurance_selection():
     insurance_choices = input('Would you like to save, view, or delete?: ')
     if insurance_choices.lower() in user_choices['save_insurance_choices']:
         save_insurance()
     elif insurance_choices.lower() in user_choices['see_insurance_choices']:
         see_insurance()
-        
+    else:
+        print('Invalid Choice')
+        insurance_selection()
+
 def driving_selection():
     driving_choices = input('Would you like to save, view, or delete?: ')
     if driving_choices.lower() in user_choices['save_driving_choices']:
         save_driving()
     elif driving_choices.lower() in user_choices['see_driving_choices']:
         see_driving()
-        
+    else:
+        print('Invalid Choice')
+        driving_selection()
+
 def passport_selection():
     passport_choices = input('Would you like to save, view, or delete?: ')
     if passport_choices.lower() in user_choices['save_passport_choices']:
         save_passport()
     elif passport_choices.lower() in user_choices['see_passport_choices']:
         see_passport()
-        
+    else:
+        print('Invalid Choice')
+        passport_selection()
+
 def legal_selection():
     legal_choices = input('Would you like to save, view, or delete?: ')
     if legal_choices.lower() in user_choices['save_legal_choices']:
         save_legal()
     elif legal_choices.lower() in user_choices['see_legal_choices']:
         see_legal()
-        
+    else:
+        print('Invalid Choice')
+        legal_selection()
+
 def ethnicity_selection():
     ethnicity_choices = input('Would you like to save, view, or delete?: ')
     if ethnicity_choices.lower() in user_choices['save_ethnicity_choices']:
         save_ethnicity()
     elif ethnicity_choices.lower() in user_choices['see_ethnicity_choices']:
         see_ethnicity()
+    else:
+        print('Invalid Choice')
+        ethnicity_selection()
+        
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
+def save_address():
+    address = input('Street Adress: ')
+    state = input('State/province: ')
+    city = input('City: ')
+    zipcode = input('Zipcode: ')
+    aptnumber = input('Apartment Number: ')
 
+    save_address[address] = {'state': state, 'city': city, 'zipcode': zipcode, 'aptnumber': aptnumber}
+    
+def save_banking():
+    bank = input('Bank: ')
+    account = input('Account: ')
+    routing = input('Routing: ')
 
+    save_banking[bank] = {'account': account, 'routing': routing}
+    
+def save_ssn():
+    ssn = input('Social Security Number: ')
 
+    save_ssn[ssn] = {'ssn': ssn}
+    
+def save_phone_number():
+    phone = input('Phone Number: ')
 
+    save_phone_number[phone] = {'phone': phone}
+    
+def save_login():
+    domain = input('Domain: ')
+    username = input('Username: ')
+    password = input('Password: ')
+
+    save_login[domain] = {'Username': username, 'Password': password}
+    
+def save_email():
+    email = input('Email: ')
+
+    save_email[email] = {'email': email}
+    
+def save_password():
+    password = input('Password: ')
+
+    save_password[password] = {'password': password}
+    
+def save_birth():
+    day = input('Day: ')
+    month = input('Month: ')
+    year = input('Year: ')
+
+    save_birth[day] = {'month': month, 'year': year}
+    
+def save_gender():
+    gender = input('Gender: ')
+
+    save_gender[gender] = {'gender': gender}
+    
+
+    
 
 personal_information_selection()
