@@ -1,3 +1,4 @@
+
 user_choices = {    
   'address_choices' : ['1', 'one', 'One', 'Address Information', 'Address information', 'address information', 'Address Info', 'Address info', 'address info', 'Address', 'address'],
   'banking_choices' : ['2', 'two', 'Two', 'Banking Information', 'Banking information', 'banking information', 'Bank Information', 'Banking information', 'banking information', 'Banking Info', 'Banking info', 'banking info', 'Bank Info', 'Bank info', 'bank info'],
@@ -323,8 +324,11 @@ def save_banking():
     bank = input('Bank: ')
     account = input('Account: ')
     routing = input('Routing: ')
+    type = input('Account Type: ')
+    webiste = input('Bank Website: ')
+    phone_number = input('Phone Number: ')
 
-    save_banking[bank] = {'account': account, 'routing': routing}
+    save_banking[bank] = {'account': account, 'routing': routing, 'type': type, 'website': website, 'phone number': phone number}
     
 def save_ssn():
     ssn = input('Social Security Number: ')
@@ -333,20 +337,27 @@ def save_ssn():
     
 def save_phone_number():
     phone = input('Phone Number: ')
+    primary = input('Primary Contact: ')
+    emergency = input('Emergency Contacts')
 
-    save_phone_number[phone] = {'phone': phone}
+    save_phone_number[phone] = {'phone': phone, 'primary': primary, 'emergency': emergency}
     
 def save_login():
     domain = input('Domain: ')
     username = input('Username: ')
     password = input('Password: ')
+    type = input('Account Type: ')
+    name = input('Account Name: ')
 
-    save_login[domain] = {'Username': username, 'Password': password}
+    save_login[domain] = {'Username': username, 'Password': password, 'type': type, 'name': name}
     
 def save_email():
     email = input('Email: ')
+    primary = input('Primary Email: ')
+    business = input('Business Email: ')
+    preferred = input('Preffered Email for Communication: ')
 
-    save_email[email] = {'email': email}
+    save_email[email] = {'email': email, 'primary': primary, 'business': business, 'preferred': preffered}
     
 def save_password():
     password = input('Password: ')
@@ -365,7 +376,63 @@ def save_gender():
 
     save_gender[gender] = {'gender': gender}
     
-
+def save_nationality():
+    nationality = input('Country: ')
+    
+    save_nationality[nationality] = {'nationality': nationality}
+    
+def save_occupation():
+    title = input('Job Title: ')
+    company = input('Company: ')
+    years_of_experience = input('Years of Experience: ')
+    
+    save_occupation[title] = {'company': company, 'years of experience': years_of_experience}
+    
+def save_education():
+    school = input('School: ')
+    college = input('College: ')
+    trade = input('Trade: ')
+    
+    save_education[school] = {'college': college, 'trade': trade}
+    
+def save_medical():
+    condition = input('Medical Condition: ')
+    diagnosis = input('Medical Diagnosis: ')
+    name = input('Name of Medication: ')
+    dosage = input('Dosage of Medication: ')
+    allergies = input('Allergies: ')
+    blood_type = input('Blood Type: ')
+    illness = input('Chronic Illness: ')
+    
+    save_medical[condition] = {'diagnosis': diagnosis, 'name': name, 'dosage': dosage, 'allergies': allergies, 'blood type': blood_type, 'illness': illness}
+    
+def save_insurance():
+    name = input('Insurance company name: ')
+    policy = input('Insurance policy number: ')
+    number = input('Insurance group number: ')
+    plan = input('Insurance plan type: ')
+    effective_date = input('Insurance plan effective date: ')
+    expiration_date = input('Insurance plan expiration date: ')
+    detail = input('Insurance plan coverage details: ')
+    insured = input('Assets Insured: ')
+    deductible = input('Insurance plans deductible amount: ')
+    co_payment = input('Insurance plans co-pay amount: ')
+    
+    save_insurance[name] = {'policy': policy, 'number': number, 'plan': plan, 'effective date': effective_date, 'expiration date': expiration_date, 'detail': detail, 'insured': insured, 'deductible': deductible, 'co-payment': co_payment}
+    
+def save_passport():
+    number = input('Passport number: ')
+    date = input('Date of Issue: ')
+    expiration = input('Date of Expiration: ')
+    country = input('Issuing Country: ')
+    place = input('Place of Issue: ')
+    name = input('Full Name: ')
+    dob = input('Date of Birth: ')
+    gender = input('Gender: ')
+    nationality = input('Nationality: ')
+    restrictions = input('Restrictions or Limitations: ')
+    
+    
     
 
 personal_information_selection()
