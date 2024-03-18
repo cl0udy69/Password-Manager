@@ -325,10 +325,10 @@ def save_banking():
     account = input('Account: ')
     routing = input('Routing: ')
     type = input('Account Type: ')
-    webiste = input('Bank Website: ')
+    website = input('Bank Website: ')
     phone_number = input('Phone Number: ')
 
-    save_banking[bank] = {'account': account, 'routing': routing, 'type': type, 'website': website, 'phone number': phone number}
+    save_banking[bank] = {'account': account, 'routing': routing, 'type': type, 'website': website, 'phone number': phone_number}
     
 def save_ssn():
     ssn = input('Social Security Number: ')
@@ -357,7 +357,7 @@ def save_email():
     business = input('Business Email: ')
     preferred = input('Preffered Email for Communication: ')
 
-    save_email[email] = {'email': email, 'primary': primary, 'business': business, 'preferred': preffered}
+    save_email[email] = {'email': email, 'primary': primary, 'business': business, 'preferred': preferred}
     
 def save_password():
     password = input('Password: ')
@@ -372,28 +372,33 @@ def save_birth():
     save_birth[day] = {'month': month, 'year': year}
     
 def save_gender():
+    sex = input('Sex: ')
     gender = input('Gender: ')
-
-    save_gender[gender] = {'gender': gender}
+    pronouns = input('Pronouns:')
+   
+    save_gender[sex] = {'sex': sex, 'gender': gender, 'pronouns': pronouns} 
     
 def save_nationality():
     nationality = input('Country: ')
+    citizenship = input('Country of Citizenship: ')
+    origin = input('National Origin: ')
     
-    save_nationality[nationality] = {'nationality': nationality}
+    save_nationality[nationality] = {'nationality': nationality, 'citizenship': citizenship, 'origin': origin,}
     
 def save_occupation():
     title = input('Job Title: ')
     company = input('Company: ')
+    profession = input('Profession: ')
     years_of_experience = input('Years of Experience: ')
     
-    save_occupation[title] = {'company': company, 'years of experience': years_of_experience}
+    save_occupation[title] = {'title': title, 'company': company, 'profession': profession, 'years of experience': years_of_experience}
     
 def save_education():
-    school = input('School: ')
-    college = input('College: ')
-    trade = input('Trade: ')
+    level = input('Highest level of education: ')
+    degree = input('Highest degree earned: ')
+    field = input('Field of Study: ')
     
-    save_education[school] = {'college': college, 'trade': trade}
+    save_education[level] = {'level': level, 'degree': degree, 'field': field}
     
 def save_medical():
     condition = input('Medical Condition: ')
@@ -403,8 +408,10 @@ def save_medical():
     allergies = input('Allergies: ')
     blood_type = input('Blood Type: ')
     illness = input('Chronic Illness: ')
+    implants = input('Medical Devices or Implants: ')
+    history = input('Medical History: ')
     
-    save_medical[condition] = {'diagnosis': diagnosis, 'name': name, 'dosage': dosage, 'allergies': allergies, 'blood type': blood_type, 'illness': illness}
+    save_medical[condition] = {'diagnosis': diagnosis, 'name': name, 'dosage': dosage, 'allergies': allergies, 'blood type': blood_type, 'illness': illness, 'implants': implants, 'history': history}
     
 def save_insurance():
     name = input('Insurance company name: ')
@@ -432,7 +439,32 @@ def save_passport():
     nationality = input('Nationality: ')
     restrictions = input('Restrictions or Limitations: ')
     
+    save_passport[number] = {'number': number, 'date': date, 'expiration': expiration, 'country': country, 'place': place, 'name': name, 'dob': dob, 'gender': gender, 'nationality': nationality, 'restrictions': restrictions}
     
+def save_legal():
+    issues = input('Legal Issues: ')
+    obligations = input('Legal Obligations or Restrictions: ')
+    documents = input('legal Documents: ')
     
+    save_legal[issues] = {'issues': issues, 'obligations': obligations, 'documents': documents}
+    
+def save_ethnicity():
+    ethnicity = input('Ethnicity: ')
+    racial = input('Racial Background: ')
+    cultural = input('Cultural Background: ')
+    
+    save_ethnicity[ethnicity] = {'ethnicity': ethnicity, 'racial': racial, 'cultural': cultural}
+    
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+def see_address():
+    if not save_address:
+        print('No saved personal information.')
+    else: 
+        print('Saved address: ')
+        for address, address_info in save_address.items():
+            print(f'Street Address: {address}, State: {address_info["State/province"]}, City: {address_info["City"]}, Zipcode: {address_info["Zipcode"]}, Apartment Number: {address_info["Apartment Number"]}')
+
+
 
 personal_information_selection()
