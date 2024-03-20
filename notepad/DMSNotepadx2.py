@@ -1,3 +1,4 @@
+
 user_choices = {    
     'address_choices' : ['1', 'one', 'One', 'Address Information', 'Address information', 'address information', 'Address Info', 'Address info', 'address info', 'Address', 'address'],
     'banking_choices' : ['2', 'two', 'Two', 'Banking Information', 'Banking information', 'banking information', 'Bank Information', 'Banking information', 'banking information', 'Banking Info', 'Banking info', 'banking info', 'Bank Info', 'Bank info', 'bank info'],
@@ -77,8 +78,45 @@ user_choices = {
 }
         
 error_handling_positive = {
-    'no_banking_choices' : ['Yes', 'yes', 'Y', 'y'],
-    'no_address_choice' : ['Yes', 'yes', 'Y', 'y']
+    'save_address_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_banking_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_ssn_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_phone_number_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_login_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_email_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_password_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_birth_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_gender_choices' : ['Yes', 'yes', 'Y', 'y',],
+    'save_nationality_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_occupation_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_education_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_medical_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_insurance_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_driving_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_passport_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_legal_choices' : ['Yes', 'yes', 'Y', 'y'],
+    'save_ethnicity_choices' : ['Yes', 'yes', 'Y', 'y'],
+}
+
+error_handling_negative = {
+    'dont_save_address_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_banking_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_ssn_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_phone_number_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_login_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_email_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_password_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_birth_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_gender_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_nationality_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_occupation_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_education_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_medical_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_insurance_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_driving_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_passport_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_legal_choices' : ['No', 'no', 'N', 'n'],
+    'dont_save_ethnicity_choices' : ['No', 'no', 'N', 'n'],
 }
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -463,25 +501,62 @@ def save_ethnicity():
 
 def see_address():
     if not save_address:
-        selection = input('There seems to be no address information saved. Would you like to save some data?')
-        if selection.lower() in error_handling_positive['no_address_choices']:
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_address_choices']:
             save_address()
-    else: 
+        if selection.lower() in error_handling_negative['dont_save_address_choices']:
+            choices = input('What would you like to do?')
+    else:  
         print('Saved address: ')
         for address, address_info in save_address.items():
             print(f'Street Address: {address}, State: {address_info["State/province"]}, City: {address_info["City"]}, Zipcode: {address_info["Zipcode"]}, Apartment Number: {address_info["Apartment Number"]}')
 
 def see_banking():
     if not save_banking:
-        selection = input('There seems to be no banking information saved. Would you like to save some data?')
-        if selection.lower() in error_handling_positive['no_banking_choices']:
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_banking_choices']:
             save_banking()
     else:
-        print('Saved banking information: ')
+        print('Saved Banking Information: ')
         for banking, banking_info in save_banking.items():
             print(f'Account: {banking}, Routing: {banking_info["Routing"]}, Account Type: {banking_info["Account Type"]}, Banking Website: {banking_info["Bank Website"]}, Phone Number: {banking_info["Phone Number"]}')
-          
 
-
+def see_ssn():
+    if not save_ssn:
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_ssn_choices']:
+            save_ssn()
+    else:
+        print('Saved Social Security Number:')
+        for ssn, ssn_info in save_ssn.items():
+            print(f'Social Security Number: {ssn}')
+            
+def see_phone_number():
+    if not save_phone_number:
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_phone_number_choices']:
+            save_phone_number()
+    else:
+        print('Saved Phone Number')
+        for phone_number, phone_number_info in save_phone_number.items():
+            print(f'Phone Number: {phone_number}')
+            
+def see_login():
+    if not save_login:
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_login_choices']:
+            save_login()
+    else:
+        print('Save Login')
+        for login, login_info in save_login.items():
+            print(f'Domain: {login}, Username: {login_info["Username"]}, Password: {login_info["Password"]}, Email: {login_info["Email"]}, Type: {login_info["Account Type"]}, Name: {login_info["Name"]}')
+        
+def see_email():
+    if not save_email:
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_email_choices']:
+            save_email()
+    else:
+        print('Save Email')        
 
 personal_information_selection()
