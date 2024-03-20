@@ -557,6 +557,9 @@ def see_email():
         if selection.lower() in error_handling_positive['save_email_choices']:
             save_email()
     else:
-        print('Save Email')        
+        print('Save Email')     
+        for email, email_info in save_email.itmes():
+            print(f'Email: {email}')
+               
 
 personal_information_selection()
