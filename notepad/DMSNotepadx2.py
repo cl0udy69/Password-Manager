@@ -506,7 +506,11 @@ def see_address():
             save_address()
         if selection.lower() in error_handling_negative['dont_save_address_choices']:
             choices = input('What would you like to do?')
-    else:  
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else:
+            print("Invalid Input")
+    else:    
         print('Saved address: ')
         for address, address_info in save_address.items():
             print(f'Street Address: {address}, State: {address_info["State/province"]}, City: {address_info["City"]}, Zipcode: {address_info["Zipcode"]}, Apartment Number: {address_info["Apartment Number"]}')
@@ -516,6 +520,12 @@ def see_banking():
         selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
         if selection.lower() in error_handling_positive['save_banking_choices']:
             save_banking()
+        if selection.lower() in error_handling_negative['dont_save_banking_choices']:
+            choices  = input('What would you like to do?')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else:
+            print('Invlid Input')
     else:
         print('Saved Banking Information: ')
         for banking, banking_info in save_banking.items():
@@ -526,6 +536,12 @@ def see_ssn():
         selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
         if selection.lower() in error_handling_positive['save_ssn_choices']:
             save_ssn()
+        if selection.lower() in error_handling_negative['dont_save_ssn_choices']:
+            choices = input('What would you like to do?')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else:
+            print('Invalid Input')
     else:
         print('Saved Social Security Number:')
         for ssn, ssn_info in save_ssn.items():
@@ -536,6 +552,12 @@ def see_phone_number():
         selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
         if selection.lower() in error_handling_positive['save_phone_number_choices']:
             save_phone_number()
+        if selection.lower() in error_handling_negative['dont_save_phone_number_choices']:
+            choices = input('What would you like to do?')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else:
+            print('Invalid Input')
     else:
         print('Saved Phone Number')
         for phone_number, phone_number_info in save_phone_number.items():
@@ -546,6 +568,10 @@ def see_login():
         selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
         if selection.lower() in error_handling_positive['save_login_choices']:
             save_login()
+        if selection.lower() in error_handling_negative['dont_save_login_choices']:
+            choices = input('What would you like to do?')
+        if choices.lower() in user_choices:
+            personal_information_selection()
     else:
         print('Save Login')
         for login, login_info in save_login.items():
@@ -556,10 +582,52 @@ def see_email():
         selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
         if selection.lower() in error_handling_positive['save_email_choices']:
             save_email()
+        if selection.lower() in error_handling_negative['dont_save_email_choices']:
+            choices = input('What would you like to do?')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else: 
+            print('Invalid Input')
     else:
         print('Save Email')     
         for email, email_info in save_email.itmes():
             print(f'Email: {email}')
+            
+def see_password():
+    if not save_password:
+        selection = input('Uh Oh! There seems to be nothing save. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_password_choices']:
+            save_password()
+        if selection.lower() in error_handling_negative['dont_save_password_choice']:
+            choices = input('What would you like to do?')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else: 
+            print('Invalid Input')
+    else:
+        print('Save Password')
+        for password, password_info in save_password.items():
+            print(f'Password: {password}')
+            
+def see_birth():
+    if not save_birth:
+        selection = input('Uh Oh! There seems to be nothing save. Would you like to save your data?: ')
+        if selection.lower() in error_handling_positive['save_birth_choices']:
+            save_birth()
+        if selection.lower() in error_handling_negative['dont_save_birth_choices']:
+            choices = input('What would you like to do?')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else: 
+            print('Invalid Input')
+    else:
+        print('Save Birthday')
+        for birth, birth_info in save_birth.items():
+            print(f'Day: {birth}, Month: {birth_info["Day"]}, Year: {birth_info["Year"]}')
+            
+    
+        
+        
                
 
 personal_information_selection()
