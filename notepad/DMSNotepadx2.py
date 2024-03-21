@@ -659,18 +659,23 @@ def see_nationality():
             
 def see_occupation():
     if not save_nationality():
-        selection = input('Uh Oh! There seems to be an issue. Would you like to save something?: ')
-        if selection.lower() in error_handling_positive['save_occupation_choices']:
+        selection = input('Uh Oh! There seems to be an issue. Would you like to save something?: ').lower()
+        if selection in error_handling_positive['save_occupation_choices']:
             save_occupation()
-        if selection.lower() in error_handling_negative['dont_save_occupation_choices']:
-            choices = input('What would you like to do?: ')
-        if choices.lower() in user_choices:
-            personal_information_selection()
+        elif selection in error_handling_negative['dont_save_occupation_choices']:
+            choices = input('What would you like to do?: ').lower()
+            if choices in user_choices:
+                personal_information_selection()
+            else:
+                print('Invalid Input')
         else:
             print('Invalid Input')
     else:
         print('Save Occupation')
-        print(f'Job Title: {occupation_info["Job Title"]}, Company: {occupation_info["Company"]}, Profession: {occupation_info["Profession"]}, Years of Experience: {occupation_info["Years of Experience"]}')
+        for title, occupation_info in save_occupation.items():
+            print(f'Job Title: {title}, Company: {occupation_info["company"]}, Profession: {occupation_info["profession"]}, Years of Experience: {occupation_info["years of experience"]}')
+       
+
         
 
                
