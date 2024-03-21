@@ -505,7 +505,7 @@ def see_address():
         if selection.lower() in error_handling_positive['save_address_choices']:
             save_address()
         if selection.lower() in error_handling_negative['dont_save_address_choices']:
-            choices = input('What would you like to do?')
+            choices = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
         else:
@@ -521,7 +521,7 @@ def see_banking():
         if selection.lower() in error_handling_positive['save_banking_choices']:
             save_banking()
         if selection.lower() in error_handling_negative['dont_save_banking_choices']:
-            choices  = input('What would you like to do?')
+            choices  = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
         else:
@@ -537,7 +537,7 @@ def see_ssn():
         if selection.lower() in error_handling_positive['save_ssn_choices']:
             save_ssn()
         if selection.lower() in error_handling_negative['dont_save_ssn_choices']:
-            choices = input('What would you like to do?')
+            choices = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
         else:
@@ -553,7 +553,7 @@ def see_phone_number():
         if selection.lower() in error_handling_positive['save_phone_number_choices']:
             save_phone_number()
         if selection.lower() in error_handling_negative['dont_save_phone_number_choices']:
-            choices = input('What would you like to do?')
+            choices = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
         else:
@@ -569,7 +569,7 @@ def see_login():
         if selection.lower() in error_handling_positive['save_login_choices']:
             save_login()
         if selection.lower() in error_handling_negative['dont_save_login_choices']:
-            choices = input('What would you like to do?')
+            choices = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
     else:
@@ -583,7 +583,7 @@ def see_email():
         if selection.lower() in error_handling_positive['save_email_choices']:
             save_email()
         if selection.lower() in error_handling_negative['dont_save_email_choices']:
-            choices = input('What would you like to do?')
+            choices = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
         else: 
@@ -595,11 +595,11 @@ def see_email():
             
 def see_password():
     if not save_password:
-        selection = input('Uh Oh! There seems to be nothing save. Would you like to save your data?: ')
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
         if selection.lower() in error_handling_positive['save_password_choices']:
             save_password()
         if selection.lower() in error_handling_negative['dont_save_password_choice']:
-            choices = input('What would you like to do?')
+            choices = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
         else: 
@@ -611,11 +611,11 @@ def see_password():
             
 def see_birth():
     if not save_birth:
-        selection = input('Uh Oh! There seems to be nothing save. Would you like to save your data?: ')
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save your data?: ')
         if selection.lower() in error_handling_positive['save_birth_choices']:
             save_birth()
         if selection.lower() in error_handling_negative['dont_save_birth_choices']:
-            choices = input('What would you like to do?')
+            choices = input('What would you like to do?: ')
         if choices.lower() in user_choices:
             personal_information_selection()
         else: 
@@ -625,9 +625,54 @@ def see_birth():
         for birth, birth_info in save_birth.items():
             print(f'Day: {birth}, Month: {birth_info["Day"]}, Year: {birth_info["Year"]}')
             
-    
+def see_gender():
+    if not save_gender:
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ')
+        if selection.lower() in error_handling_positive['save_gender_choices']:
+            save_gender()
+        if selection.lower() in error_handling_negative['dont_save_gender_choices']:
+            choices = input('What would you like to do?: ')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else:
+            print('Invalid Input')
+    else:
+        print('Save Gender')
+        for gender, gender_info in save_gender.items():
+            print(f'Gender {gender}')
+            
+def see_nationality():
+    if not save_nationality:
+        selection = input('Uh Oh! There seems to be nothing save. Would you like to save something?: ')
+        if selection.lower() in error_handling_positive['save_nationality_choices']:
+            save_nationality()
+        if selection.lower() in error_handling_negative['dont_save_nationality_choices']:
+            choices = input('What would you like to do?: ')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else:
+            print('Invalid Input')
+    else:
+        print('Save Nationality')
+        for nationality, nationality_info in save_nationality.items():
+            print(f'Country {nationality}, Country of Citizenship {nationality_info["Country of Citizenship"]}, National Origin {nationality_info["National Origin"]}')
+            
+def see_occupation():
+    if not save_nationality():
+        selection = input('Uh Oh! There seems to be an issue. Would you like to save something?: ')
+        if selection.lower() in error_handling_positive['save_occupation_choices']:
+            save_occupation()
+        if selection.lower() in error_handling_negative['dont_save_occupation_choices']:
+            choices = input('What would you like to do?: ')
+        if choices.lower() in user_choices:
+            personal_information_selection()
+        else:
+            print('Invalid Input')
+    else:
+        print('Save Occupation')
+        print(f'Job Title: {occupation_info["Job Title"]}, Company: {occupation_info["Company"]}, Profession: {occupation_info["Profession"]}, Years of Experience: {occupation_info["Years of Experience"]}')
         
-        
+
                
 
 personal_information_selection()
