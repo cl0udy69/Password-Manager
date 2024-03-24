@@ -263,13 +263,13 @@ def see_insurance():
         for insurance, insurance_info in save_insurance.items():
             print(f'Insurance company name {insurance_info["name"]}, Insurance policy number{insurance_info["policy"]}, Insurance group number{insurance_info["group"]}, Insurance plan type{insurance_info["plan_type"]}, Insurance plan effective date{insurance_info["effective_date"]}, Insurance plan expiration date{insurance_info["expiration_date"]}, Insurance plan coverage details{insurance_info["details"]}, Assets Injured{insurance_info["insured"]}, Insurance plans deductible amount{insurance_info["deductibe"]}, Insurance plans co-pay amount{insurance_info["co_payment"]}')
        
-def see_medical():
-    if not save_medical():
-        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ').lower()
-        if selection in error_handling_positive['save_medical_choices']:
-            save_medical()
-        elif selection in error_handling_negative['dont_save_medical_choices']:
-            choices = input('What would you like to do?: ')
+def see_passport():
+    if not save_passport():
+        selection = input('Uh Oh! There seems to be nothing saved. would you like to save something?: ').lower()
+        if selection in error_handling_positive['saeve_passport_choices']:
+            save_password()
+        elif selection in error_handling_negative['dont_save_passport_choices']:
+            choices = input('What would you like to do?: ').lower()
             if choices.lower() in user_choices:
                 personal_information_selection()
             else:
@@ -277,7 +277,45 @@ def see_medical():
         else:
             print('Invalid Input')
     else:
-        medical_info = save_medical()
-        print('Save Medical')
-        for medical, medical_info in save_medical.items():
-            print(f'Medical Condition {medical_info["condition"]}, Medical Diagnosis{medical_info["diagnosis"]}, Name of Medication{medical_info["name"]}, Dosage of Medication{medical_info["dosage"]}, Allergies{medical_info["allergies"]}, Blood Type{medical_info["blood_type"]}, Chronic Illness{medical_info["illness"]}, Medical Devices or Implants{medical_info["implants"]}, Medical History{medical_info["history"]}')
+        passport_info = save_passport()
+        print('Save Passport')
+        for passport, passport_info in save_passport.items():
+            print(f'Passport number {passport_info["number"]}, Date of Issue {passport_info["date"]}')
+            
+def see_legal():
+    if not save_legal():
+        selection = input('Uh Oh! There seems to be nothing saved. would you like to save something?: ').lower()
+        if selection in error_handling_positive['save_legal_choices']:
+            save_legal()
+        elif selection in error_handling_negative['dont_save_legal_choices']:
+            choices = input('What would you like to do?: ').lower()
+            if choices.lower() in user_choices:
+                personal_information_selection()
+            else:
+                print('Invalid Input')
+        else:
+            print('Invalid Input')
+    else:
+        legal_info = save_legal()
+        print('Save Legal')
+        for legal, legal_info in save_legal.items():
+            print(f'Legal Status {legal_info["status"]}, Legal Status Date {legal_info["status_date"]}, Legal Status Expiration Date {legal_info["status_expiration_date"]}')
+            
+def see_ethnicity():
+    if not save_ethnicity():
+        selection = input('Uh Oh! There seems to be nothing saved. would you like to save something?: ').lower()
+        if selection in error_handling_positive['save_ethnicity_choices']:
+            save_ethnicity()
+        elif selection in error_handling_negative['dont_save_ethnicity_choices']:
+            choices = input('What would you like to do?: ').lower()
+            if choices.lower() in user_choices:
+                personal_information_selection()
+            else:
+                print('Invalid Input')
+        else:
+            print('Invalid Input')
+    else:
+        ethnicity_info = save_ethnicity()
+        print('Save Ethnicity')
+        for ethnicity, ethnicity_info in save_ethnicity.items():
+            print(f'Ethnicity {ethnicity_info["ethnicity"]}, Racial Background {ethnicity_info["racial"]}, Cultural Background {ethnicity_info["cultural"]}')
