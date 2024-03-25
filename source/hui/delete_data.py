@@ -111,4 +111,23 @@ def delete_insurance_field():
         print('Field not found')
         
 def delete_passport_field():
-    field_to_delete = input('Enter the field you would like to delete: ')
+    field_to_delete = input('Enter the field you would like to delete: ').lower()
+    if field_to_delete in save_pasport[passport]:
+        del save_passport[passport][field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+    else:
+        print('Field not found')
+        
+def delete_legal_field():
+    field_to_delete = input('Enter the field you would like to delete: ').lower()
+    if field_to_delete in save_legal[legal]:
+        del save_legal[legal][field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+    else:
+        print('Field not found')
+        
+def delete_ethnicity_field():
+    field_to_delete = input('Enter the field would like to delete: ').lower()
+    if field_to_delete in save_ethnicity[ethnicity]:
+        del save_ethnicity[ethnicity][field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully ')
