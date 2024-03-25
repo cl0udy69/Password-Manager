@@ -75,6 +75,55 @@ def edit_email():
             print('Field not found')
     else:
         print('Email not found')
-        
 
-    
+def edit_password():
+    password_to_edit = input('Enter the field you want to edit: ').lower()
+    if password_to_edit in save_password:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_passwod[password_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_password[password_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Password not found')
+        
+def edit_birth():
+    birth_to_edit = input('Enter the field you want to edit: ').lower()
+    if birth_to_edit in save_birth:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_birth[birth_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_birth[birth_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Date of birth not found')
+        
+def edit_gender():
+    gender_to_edit = input('Enter the field you want to edit: ').lower()
+    if gender_to_edit in save_gender:
+        field_to_edit = input('Etner the fied you want to edit: ').lower()
+        if field_to_edit in save_gender[gender_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_gender[gender_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        ('Gender not found')
+
+def edit_nationality():
+    nationality_to_edit = input('Enter the field you want to edit: ').lower()
+    if nationality_to_edit in save_nationality:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_nationality[nationality_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}')
+            save_nationality[nationality_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Nationality not found')
