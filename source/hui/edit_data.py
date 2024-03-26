@@ -11,18 +11,22 @@ def edit_address():
     else:
         print("Address not found.")
         
-def edit_banking():
-    banking_to_edit = input('Enter the field you want to edit: ').lower()
-    if banking_to_edit in save_banking:
-        field_to_edit = input('Enter the field you want to edit: ').lower()
-        if field_to_edit in save_banking[banking_to_edit]:
-            new_value = input(f'Enter the new value for {field_to_edit}: ')
-            save_banking[banking_to_edit][field_to_edit] = new_value
-            print(f'{field_to_edit.capitalize()} updated successfully')
-        else:
-            print('Field not found')
-    else:
-        print('Banking not found')
+def edit_banking(): 
+    print("Select the bank field you want to edit:")
+    for bank, data in save_banking.items():
+        print(bank)
+        for field in data:
+            print(f" - {field}")
+
+    banking_to_edit = input('Enter the bank field you want to edit: ').lower()
+    for bank, data in save_banking.items():
+        if banking_to_edit in data:
+            new_value = input(f'Enter the new value for {banking_to_edit}: ')
+            save_banking[bank][banking_to_edit] = new_value
+            print(f'{banking_to_edit.capitalize()} updated successfully')
+            return  
+    print('Field not found')
+
         
 def edit_ssn():
     ssn_to_edit = input('Enter the field you want to edit: ').lower()
@@ -197,3 +201,4 @@ def edit_legal():
     
     
 def edit_ethnicity():
+    
