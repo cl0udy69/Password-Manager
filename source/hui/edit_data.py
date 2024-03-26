@@ -120,10 +120,80 @@ def edit_nationality():
     if nationality_to_edit in save_nationality:
         field_to_edit = input('Enter the field you want to edit: ').lower()
         if field_to_edit in save_nationality[nationality_to_edit]:
-            new_value = input(f'Enter the new value for {field_to_edit}')
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
             save_nationality[nationality_to_edit][field_to_edit] = new_value
             print(f'{field_to_edit.capitalize()} updated successfully')
         else:
             print('Field not found')
     else:
         print('Nationality not found')
+        
+def edit_occupation():
+    occupation_to_edit = input('Enter the field you want to edit: ').lower()
+    if occupation_to_edit in save_occupation:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_occupation[occupation_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_occupation[occupation_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Occupation not found')
+        
+def edit_education():
+    education_to_edit = input('Enter the field you want to edit: ').lower()
+    if education_to_edit in save_education:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_education[education_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_education[education_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Education not found')
+
+def edit_medical():
+    medical_to_edit = input('Enter the field you want to edit: ').lower()
+    if medical_to_edit in save_medical:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_medical[medical_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_medical[medical_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Medical not found')
+        
+def edit_insurance():
+    insurance_to_edit = input('Enter the field you want to edit: ').lower()
+    if insurance_to_edit in save_insurance:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_insurance[insurance_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_insurance[insurance_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Insurance not found')
+        
+def edit_passport():
+    passport_to_edit = input('Enter the field you want to edit: ').lower()
+    if passport_to_edit in save_passport:
+        field_to_edit = input('Enter the field you want to edit: ').lower()
+        if field_to_edit in save_passport[passport_to_edit]:
+            new_value = input(f'Enter the new value for {field_to_edit}: ')
+            save_passport[passport_to_edit][field_to_edit] = new_value
+            print(f'{field_to_edit.capitalize()} updated successfully')
+        else:
+            print('Field not found')
+    else:
+        print('Passport not found')
+    
+def edit_legal():
+    
+    
+def edit_ethnicity():
