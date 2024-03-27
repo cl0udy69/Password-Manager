@@ -89,7 +89,7 @@ def see_login():
             print('Invalid Input')
     else:
         login_info = save_login()
-        print('Save Login')
+        print('Saved Login')
         for login, login_info in save_login.items():
             print(f'Domain: {login}, Username: {login_info["Username"]}, Password: {login_info["Password"]}, Email: {login_info["Email"]}, Type: {login_info["Account Type"]}, Name: {login_info["Name"]}')
         
@@ -108,7 +108,7 @@ def see_email():
             print('Invalid Input')
     else:
         email_info = save_email()
-        print('Save Email')     
+        print('Saved Email')     
         for email, email_info in save_email.itmes():
             print(f'Email: {email}')
             
@@ -127,7 +127,7 @@ def see_password():
             print('Invalid Input')
     else:
         password_info = save_password()
-        print('Save Password')
+        print('Saved Password')
         for password, password_info in save_password.items():
             print(f'Password: {password}')
             
@@ -146,7 +146,7 @@ def see_birth():
             print('Invalid Input')
     else:
         birth_info = save_birth()
-        print('Save Birthday')
+        print('Saved Birthday')
         for birth, birth_info in save_birth.items():
             print(f'Day: {birth}, Month: {birth_info["Day"]}, Year: {birth_info["Year"]}')
             
@@ -164,7 +164,7 @@ def see_gender():
         else:
             print('Invalid Input')
     else:
-        print('Save Gender')
+        print('Saved Gender')
         for gender, gender_info in save_gender.items():
             print(f'Gender {gender_info}')
             
@@ -183,7 +183,7 @@ def see_nationality():
             print('Invalid Input')
     else:
         nationality_info = save_nationality()
-        print('Save Nationality')
+        print('Saved Nationality')
         for nationality, nationality_info in save_nationality.items():
             print(f'Country {nationality_info}, Country of Citizenship {nationality_info["Country of Citizenship"]}, National Origin {nationality_info["National Origin"]}')
             
@@ -202,7 +202,7 @@ def see_occupation():
             print('Invalid Input')
     else:
         occupation_info = save_occupation()
-        print('Save Occupation')
+        print('Saved Occupation')
         for occupation, occupation_info in save_occupation.items():
             print(f'Job Title: {occupation_info}, Company: {occupation_info["company"]}, Profession: {occupation_info["profession"]}, Years of Experience: {occupation_info["years of experience"]}')
             
@@ -221,7 +221,7 @@ def see_education():
             print('Invalid Input')
     else:
         education_info = save_education()
-        print('Save Education')
+        print('Saved Education')
         for education, education_info in save_education.info():
             print(f'highest level of education {education_info["level"]}, Highest degree earned {education_info["degree"]}, Field of study {education_info["field"]}')
         
@@ -240,13 +240,13 @@ def see_medical():
             print('Invalid Input')
     else:
         medical_info = save_medical()
-        print('Save Medical')
+        print('Saved Medical')
         for medical, medical_info in save_medical.items():
             print(f'Medical Condition {medical_info["condition"]}, Medical diagnosis {medical_info["diagnosis"]}, Name of Medication {medical_info}, Dosage of Medication {medical_info["name"]}, Allergies {medical_info["allergies"]}, Blood Type {medical_info["blood_type"]}, Chronic Illness {medical_info["illness"]}, Medical Devices or Impants {medical_info["implants"]}, Medical history {medical_info["history"]}')
 
 def see_insurance():
     if not save_insurance():
-        selection = input('Uh Oh! There seems to be nothing saved. would you like to save something?: ').lower()
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ').lower()
         if selection in error_handling_positive['save_insurance_choices']:
             save_insurance()
         elif selection in error_handling_negative['dont_save_insurance_choices']:
@@ -259,17 +259,17 @@ def see_insurance():
             print('Invalid Input')
     else:
         insurance_info = save_insurance()
-        print('Save Insurance')
+        print('Saved Insurance')
         for insurance, insurance_info in save_insurance.items():
             print(f'Insurance company name {insurance_info["name"]}, Insurance policy number{insurance_info["policy"]}, Insurance group number{insurance_info["group"]}, Insurance plan type{insurance_info["plan_type"]}, Insurance plan effective date{insurance_info["effective_date"]}, Insurance plan expiration date{insurance_info["expiration_date"]}, Insurance plan coverage details{insurance_info["details"]}, Assets Injured{insurance_info["insured"]}, Insurance plans deductible amount{insurance_info["deductibe"]}, Insurance plans co-pay amount{insurance_info["co_payment"]}')
        
 def see_passport():
     if not save_passport():
-        selection = input('Uh Oh! There seems to be nothing saved. would you like to save something?: ').lower()
-        if selection in error_handling_positive['saeve_passport_choices']:
-            save_password()
-        elif selection in error_handling_negative['dont_save_passport_choices']:
-            choices = input('What would you like to do?: ').lower()
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ').lower()
+        if selection in error_handling_positive['save_passport_choices']:
+            save_passport()
+        elif selection in error_handling_negative['dont_save_insurance_choices']:
+            choices = input('What would you like to do?: ')
             if choices.lower() in user_choices:
                 personal_information_selection()
             else:
@@ -278,44 +278,22 @@ def see_passport():
             print('Invalid Input')
     else:
         passport_info = save_passport()
-        print('Save Passport')
+        print('Saved Passport')
         for passport, passport_info in save_passport.items():
-            print(f'Passport number {passport_info["number"]}, Date of Issue {passport_info["date"]}')
-            
+            print(f'Passport number {passport_info["number"]}, Date of Issue {passport_info["date"]}, Date of Expiration {passport_info["expiration"]}, Issuing Country {passport_info["country"]}, Place of Issue {passport_info["place"]}, Full Name {passport_info["name"]}, Date of Birth {passport_info["dob"]}, Gender {passport_info["gender"]}, Nationality {passport_info["nationality"]}, Restrictions or Limitations {passport_info["restrictions"]}')
+    
+
 def see_legal():
-    if not save_legal():
-        selection = input('Uh Oh! There seems to be nothing saved. would you like to save something?: ').lower()
-        if selection in error_handling_positive['save_legal_choices']:
-            save_legal()
-        elif selection in error_handling_negative['dont_save_legal_choices']:
-            choices = input('What would you like to do?: ').lower()
-            if choices.lower() in user_choices:
-                personal_information_selection()
-            else:
-                print('Invalid Input')
-        else:
-            print('Invalid Input')
-    else:
-        legal_info = save_legal()
-        print('Save Legal')
-        for legal, legal_info in save_legal.items():
-            print(f'Legal Status {legal_info["status"]}, Legal Status Date {legal_info["status_date"]}, Legal Status Expiration Date {legal_info["status_expiration_date"]}')
-            
+   if not save_legal():
+       selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ')
+       if selection in error_handling_positive['save_legal_choices']:
+           save_legal()
+       elif selection in error_handling_negative['dont_save_legal_choices']:
+           choices = input('What would you like to do: ')
+           if choices.lower() in user_choices:
+               personal_information_selection()
+           else:
+        
+    
+
 def see_ethnicity():
-    if not save_ethnicity():
-        selection = input('Uh Oh! There seems to be nothing saved. would you like to save something?: ').lower()
-        if selection in error_handling_positive['save_ethnicity_choices']:
-            save_ethnicity()
-        elif selection in error_handling_negative['dont_save_ethnicity_choices']:
-            choices = input('What would you like to do?: ').lower()
-            if choices.lower() in user_choices:
-                personal_information_selection()
-            else:
-                print('Invalid Input')
-        else:
-            print('Invalid Input')
-    else:
-        ethnicity_info = save_ethnicity()
-        print('Save Ethnicity')
-        for ethnicity, ethnicity_info in save_ethnicity.items():
-            print(f'Ethnicity {ethnicity_info["ethnicity"]}, Racial Background {ethnicity_info["racial"]}, Cultural Background {ethnicity_info["cultural"]}')
