@@ -119,44 +119,221 @@ def edit_email():
 
 
 def edit_password():
-
+    print("Select the field you want to edit:")
+    for password, data in save_password.items():
+        print(password) 
+        for field in password:
+            print(f" - {field}")
+            
+    password_to_edit = input('Enter the field you want to edit: ').lower()
+    for password, data in save_password.items():
+        if password_to_edit in data:
+            new_value = input(f'Enter the new value for {password_to_edit}: ')
+            save_password[password][password_to_edit] = new_value
+            print(f'{password_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Password not found')
         
 
 def edit_birth():
-    
+    print("Select the field you want to edit:")
+    for birth, data in save_birth.items():
+        print(birth)
+        for field in birth:
+            print(f" - {field}")
+            
+    birth_to_edit = input('Enter the field you want to edit: ').lower()
+    for birth, data in save_birth.items():
+        if birth_to_edit in data:
+            new_value = input(f'Enter the new value for {birth_to_edit}: ')
+            save_birth[birth][birth_to_edit] = new_value
+            print(f'{birth_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Date of birth not found')
         
 
 def edit_gender():
+    print("Select the field you want to edit:")
+    for gender, data in save_gender.items():
+        print(gender)
+        for field in gender:
+            print(f" - {field}")
     
+    gender_to_edit = input('Enter the field you want to edit: ').lower()
+    for gender, data in save_gender.items():
+        if gender_to_edit in data:
+            new_value = input(f'Enter the new value for {gender_to_edit}: ')
+            save_gender[gender][gender_to_edit] = new_value
+            print(f'{gender_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Gender not found')
 
 
 def edit_nationality():
-    
+    print("Select the field you want to edit:")
+    for nationality, data in save_nationality.items():
+        print(nationality)
+        for field in nationality:
+            print(f" - {field}")
+            
+    nationality_to_edit = input('Enter the field you want to edit: ').lower()
+    for nationality, data in save_nationality.items():
+        if nationality_to_edit in data:
+            new_value = input(f'Enter the new value for {nationality_to_edit}: ')
+            save_nationality[nationality][nationality_to_edit] = new_value
+            print(f'{nationality_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Nationality not found')
         
 
 def edit_occupation():
-    
+    print("Select the field you want to edit:")
+    for occupation, data in save_occupation.items():
+        print(occupation)
+        for field in occupation:
+            print(f" - {field}")
+            
+    occupation_to_edit = input('Select the field you want to edit: ').lower()
+    for occupation, data in save_occupation.items():
+        if occupation_to_edit in data:
+            new_value = input(f'Enter the new value for {occupation_to_edit}: ')
+            save_occupation[occupation][occupation_to_edit] = new_value
+            print(f'{occupation_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Occupation not found')
         
 
 def edit_education():
-    
-
+    print("Select the field you want to edit:")
+    for education, data in save_education.items():
+        print(education)
+        for field in education:
+            print(f" - {field}")
+            
+    education_to_edit = input('Select the field you want to edit: ').lower()
+    for education, data in save_education.items():
+        if education_to_edit in data:
+            new_value = input(f'Enter the new value for {education_to_edit}: ')
+            save_education[education][education_to_edit] = new_value
+            print(f'{education_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Education not found')
+            
 
 def edit_medical():
+    print("Select the field you want to edit:")
+    for medical, data in save_medical.items():
+        print(meical)
+        for field in medical:
+            print(f" - {field}")
+    
+    medical_to_edit = input('Select the field you want to edit: ').lower()
+    for medical, data in save_medical.items():
+        if medical_to_edit in data:
+            new_value = input(f'Enter the new value for {medical_to_edit}: ')
+            save_medical[medical][medical_to_edit] = new_value
+            print(f'{medical_to_Edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Medical not found')
     
         
-
 def edit_insurance():
-    
+    print("Select the field you want to edit:")
+    for insurance, data in save_insurance.items():
+        print(insurance)
+        for field in insurance:
+            print(f" - {field}")
+            
+    insurance_to_edit = input('Select the field you want to edit: ').lower()
+    for insurance, data in save_insurance.items():
+        if insurance_to_edit in data:
+            new_value = input(f'Enter the new value for {insurance_to_edit}: ')
+            save_insurance[insurance][insurance_to_edit] = new_value
+            print(f'{insurance_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Insurance not found')
         
 
 def edit_passport():
-    
+    print("Select the field you want to edit:")
+    for passport, data in save_passport.items():
+        print(passport)
+        for field in passport:
+            print(f" - {field}")
+            
+    passport_to_edit = input('Select the field you want to edit: ').lower()
+    for passport, data in save_passport.items():
+        if passport_to_edit in data:
+            new_value = input(f'enter the new value for {passport_to_edit}: ')
+            save_passport[passport][passport_to_edit] = new_value
+            print(f'{passport_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Passport not found')
     
 
 def edit_legal():
-    
+    print("Select the field you want to edit:")
+    for legal, data in save_legal.items():
+        print(legal)
+        for field in legal:
+            print(f" - {field}")
+            
+    legal_to_edit = input('Select the field you want to edit: ').lower()
+    for legal, data in save_legal.items():
+        if legal_to_edit in data:
+            new_value = input(f'Enter the new value for {legal_to_edit}: ')
+            save_legal[legal][legal_to_edit] = new_value
+            print(f'{legal_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Legal information not found')
     
 
 def edit_ethnicity():
+    print("Select the field you want to edit:")
+    for ethnicity, data in save_ethicity.items():
+        print(ethnicity)
+        for field in ethnicity:
+            print(f" - {field}")
+            
+    ethnicity_to_edit = input('Enter the field you want to edit: ').lower()
+    for ethnicity, data in save_ethnicity.items():
+        if ethnicity_to_edit in data:
+            new_value = input(f'Enter the new value for {ethnicity_to_edit}: ')
+            save_ethnicity[ethnicity][ethnicity_to_edit] = new_value
+            print(f'{ethnicity_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Ethnicity not found')
     
