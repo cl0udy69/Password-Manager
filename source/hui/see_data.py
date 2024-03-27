@@ -284,16 +284,40 @@ def see_passport():
     
 
 def see_legal():
-   if not save_legal():
-       selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ')
-       if selection in error_handling_positive['save_legal_choices']:
+    if not save_legal():
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ')
+        if selection in error_handling_positive['save_legal_choices']:
            save_legal()
-       elif selection in error_handling_negative['dont_save_legal_choices']:
+        elif selection in error_handling_negative['dont_save_legal_choices']:
            choices = input('What would you like to do: ')
            if choices.lower() in user_choices:
                personal_information_selection()
            else:
-        
-    
+               print('Invalid Input')
+        else:
+           print('Invalid Input')
+    else:
+        legal_info = save_legal()
+        print('Saved Legal')
+        for legal, legal_info in save_legal.items():
+            print(f'Legal Issues {legal_info["issues"]}, Legal Obligations or Restrictions {legal_info["obligations"]}, Legal Documents {legal_info["documents"]}')
+            
 
 def see_ethnicity():
+    if not save_ethnicity():
+        selection = input('Uh Oh! There seems to be nothing saved. Would you like to save something?: ').lower()
+        if selection in error_handling_positive['save_ethnicity_choices']:
+            save_ethnicity()
+        elif selection in error_handling_negative['dont_save_ethnicity_choices']:
+            choices = input('What would you like to do?: ').lower()
+            if choices.lower() in user_choices:
+                personal_information_selection()
+            else:
+                print('Invalid Input')
+        else:
+            print('Invalid Input')
+    else:
+        ethnicity_info = save_ethnicity()
+        print('Saved Ethnicity')
+        for ethnicity, ethnicity_info in save_ethnicity.items():
+            print(f'Ethnicity {ethnicity_info["ethnicity"]}, Racial Background {ethnicity_info["racial"]}, Cultural Background {ethnicity_info["cultural"]}')
