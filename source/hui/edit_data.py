@@ -99,7 +99,23 @@ def edit_login():
         
 
 def edit_email():
+    print("Select the field you want to edit:")
+    for email, data in save_email.items():
+        print(email)
+        for field in email:
+            print(f" - {field}")
     
+    email_to_edit = input('Enter the field you want to edit: ').lower()
+    for email, data in save_email.items():
+        if email_to_edit in data:
+            new_value = input(f'Enter the new value for {email_to_edit}: ')
+            save_email[email][email_to_edit] = new_value
+            print(f'{email_to_edit.capitalize()} updated successfully')
+            return
+        else:
+            print('Field not found')
+    else:
+        print('Email not found')
 
 
 def edit_password():
