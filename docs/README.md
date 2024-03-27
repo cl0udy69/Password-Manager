@@ -1,1 +1,1 @@
-Data Manegement System API
+Data Manegement System API/Discord Bot
