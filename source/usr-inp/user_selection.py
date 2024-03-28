@@ -175,7 +175,11 @@ def nationality_selection():
     if nationality_choices.lower() in user_choices['save_nationality_choices']:
         save_nationality()
     elif nationality_choices.lower() in user_choices['see_nationality_choices']:
-        see_nationality
+        see_nationality()
+    elif nationality_choices.lower() in user_choices['delete_nationality_choices']:
+        delete_nationality()
+    elif nationality_choices.lower() in user_choices['edit_nationality_choices']:
+        edit_nationality()
     else:
         print('Invalid Choice')
         nationality_selection()
@@ -186,6 +190,10 @@ def occupation_selection():
         save_occupation()
     elif occupation_choices.lower() in user_choices['see_occupation_choices']:
         see_occupation()
+    elif occupation_choices.lower() in user_choices['delete_occupation_choices']:
+        delete_occupation()
+    elif occupation_choices.lower() in user_choices['edit_occupation_choices']:
+        edit_occupation()
     else:
         print('Invalid Choice')
         occupation_selection()
@@ -196,6 +204,10 @@ def education_selection():
         save_education()
     elif education_choices.lower() in user_choices['see_education_choices']:
         see_education()
+    elif education_choices.lower() in user_choices['delete_education_choices']:
+        delete_education()
+    elif education_choices.lower() in user_choices['edit_education_choices']:
+        edit_education()
     else:
         print('Invalid Choice')
         education_selection()
@@ -206,6 +218,10 @@ def medical_selection():
         save_medical()
     elif medical_choices.lower() in user_choices['see_medical_choices']:
         see_medical()
+    elif medical_choices.lower() in user_choices['delete_medical_choices']:
+        delete_medical()
+    elif medical_choices.lower() in user_choices['edit_medical_choices']:
+        edit_medical()
     else:
         print('Invalid Choice')
         medical_selection()
@@ -216,6 +232,10 @@ def insurance_selection():
         save_insurance()
     elif insurance_choices.lower() in user_choices['see_insurance_choices']:
         see_insurance()
+    elif insurance_choices.lower() in user_choices['delete_insurance_choices']:
+        delete_insurance()
+    elif insurance_choices.lower() in user_choices['edit_insurance_choices']:
+        edit_insurance()
     else:
         print('Invalid Choice')
         insurance_selection()
@@ -226,6 +246,10 @@ def driving_selection():
         save_driving()
     elif driving_choices.lower() in user_choices['see_driving_choices']:
         see_driving()
+    elif driving_choices.lower() in user_choices['delete_driving_choices']:
+        delete_driving()
+    elif driving_choices.lower in user_choices['edit_driving_choices']:
+        edit_driving()
     else:
         print('Invalid Choice')
         driving_selection()
@@ -236,6 +260,10 @@ def passport_selection():
         save_passport()
     elif passport_choices.lower() in user_choices['see_passport_choices']:
         see_passport()
+    elif passport_choices.lower() in user_choices['delete_passport_choices']:
+        delete_passport()
+    elif passport_choices.lower() in user_choices['edit_passport_choices']:
+        edit_passport()
     else:
         print('Invalid Choice')
         passport_selection()
@@ -246,6 +274,10 @@ def legal_selection():
         save_legal()
     elif legal_choices.lower() in user_choices['see_legal_choices']:
         see_legal()
+    elif legal_choices.lower() in user_choices['delete_legal_choices']:
+        delete_legal()
+    elif legal_choices.lower() in user_choices['edit_legal_choices']:
+        edit_legal()
     else:
         print('Invalid Choice')
         legal_selection()
@@ -256,6 +288,10 @@ def ethnicity_selection():
         save_ethnicity()
     elif ethnicity_choices.lower() in user_choices['see_ethnicity_choices']:
         see_ethnicity()
+    elif ethnicity_choices.lower() in user_choices['delete_ethnicity_choices']:
+        delete_ethncitiy()
+    elif ethnicity_choices.lower() in user_choices['edit_ethnicity_choices']:
+        edit_ethnicity()
     else:
         print('Invalid Choice')
         ethnicity_selection()
