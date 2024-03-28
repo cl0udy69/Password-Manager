@@ -1,16 +1,37 @@
-def delete_address_field(address):
-    field_to_delete = input('Enter the field you would like to delete (e.g. State, Adress, Zipcode, Etc): ').lower()
-    if field_to_delete in save_address[address]:
-        del save_address[address][field_to_delete]
+def delete_field(data_dict):
+    field_to_delete = input('Enter the field you would like to delete: ').lower()
+    if field_to_delete in data_dict:
+        del data_dict[field_to_delete]
         print(f'{field_to_delete.capitalize()} deleted successfully')
+        # Prompt user to add new data
+        add_new_data = input('Do you want to add new data? (yes/no): ').lower()
+        if add_new_data == 'yes':
+            # Logic to add new data, you should implement this part based on your requirements
+            print('Adding new data...')
+    else:
+        print('Field not found')
+
+def delete_address_field():
+    field_to_delete = input('Enter the field you would like to delete (e.g. State, Address, Zipcode, etc.): ').lower()
+    if field_to_delete in save_address:
+        del save_address[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        add_new_data = input('Do you want to add new data? (yes/no): ').lower()
+        if add_new_data == 'yes':
+            # Logic to add new data for address, if needed
+            print('Adding new data...')
     else:
         print('Field not found')
         
 def delete_banking_field():
     field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if fieled_to_delete in save_bankkng[banking]:
-        del save_banking[banking][field_to_delete]
+    if field_to_delete in save_banking:
+        del save_banking[field_to_delete]
         print(f'{field_to_delete.capitalize()} deleted successfully')
+        add_new_data = input('Do you want to add new data? (yes/no): ').lower()
+        if add_new_data == 'yes':
+            # Logic to add new data for banking, if needed
+            print('Adding new data...')
     else:
         print('Field not found')
 
