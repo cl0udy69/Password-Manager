@@ -15,3 +15,4 @@
 # ~ Add more user choices to user selection prompts (FINSIHED)
 # ~ Add more options and functionality 
 # ~ Clean up code 
+# ~ Fully update dictionary to handle every user response 
