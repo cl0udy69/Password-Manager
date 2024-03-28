@@ -49,11 +49,15 @@ def personal_information_selection():
         personal_information_selection()
 
 def address_selection():
-    address_choices = input('Would you like to save, view, or delete?: ')
+    address_choices = input('What would you like to: save, view, edit, or delete?: ')
     if address_choices.lower() in user_choices['save_address_choices']:
         save_address()
     elif address_choices.lower() in user_choices['see_address_choices']:
         see_address()
+    elif address_choices.lower() in user_choices['delete_address_choices']:
+        delete_address()
+    elif address_chpices.lower() in user_choices['edit_address_choices']:
+        edit_address()
     else:
         print('Invalid Choice')
         address_selection()
@@ -64,6 +68,10 @@ def banking_selection():
         save_banking()
     elif banking_choices.lower() in user_choices['see_banking_choices']:
         see_banking()
+    elif banking_choices.lower() in user_choices['delete_banking_choices']:
+        delete_banking()
+    elif banking_choices.lower() in user_choices['edit_banking_choices']:
+        edit_banking()
     else:
         print('Invalid Choice')
         banking_selection()
@@ -74,6 +82,10 @@ def ssn_selection():
         save_ssn()
     elif ssn_choices.lower() in user_choices['see_ssn_choices']:
         see_ssn()
+    elif ssn_choices.lower() in user_choices['delete_ssn_choices']:
+        delete_ssn()
+    elif ssn_choices.lower() in user_choices['edit_ssn_choices']:
+        edit_ssn()
     else:
         print('Invalid Choice')
         ssn_selection()
@@ -84,6 +96,10 @@ def phone_number_selection():
         save_phone_number()
     elif phone_number_choices.lower() in user_choices['see_phone_number_choices']:
         see_phone_number()
+    elif phone_number_choices.lower() in user_choices['delete_phone_number_choices']:
+        delete_phone_number()
+    elif phone_number_choices.lower() in user_choices['edit_phone_number_choices']:
+        edit_phone_number()
     else:
         print('Invalid Choice')
         phone_number_selection()
@@ -94,6 +110,10 @@ def login_selection():
         save_login()
     elif login_choices.lower() in user_choices['see_login_choices']:
         see_login()
+    elif login_choices.lower() in user_choices['delete_login_choices']:
+        delete_login()
+    elif login_choices.lower() in user_choices['edit_login_choices']:
+        edit_login()
     else:
         print('Invalid Choice')
         login_selection()
@@ -104,6 +124,10 @@ def email_selection():
         save_email()
     elif email_choices.lower() in user_choices['see_email_choices']:
         see_email()
+    elif email_choices.lower() in user_choices['delete_email_choices']:
+        delete_email()
+    elif email_choices.lower() in user_choices['edit_emai_choices']:
+        edit_email()
     else:
         print('Invalid Choice')
         email_selection()
@@ -124,6 +148,10 @@ def birth_selection():
         save_birth()
     elif birth_choices.lower() in user_choices['see_birth_choices']:
         see_birth()
+    elif birth_choices.lower() in user_choice['delete_birth_choices']:
+        delete_birth()
+    elif birth_choices.lower() in user_choices['edit_birth_choices']:
+        edit_birth()
     else:
         print('Invalid Choice')
         birth_selection()
@@ -134,6 +162,10 @@ def gender_selection():
         save_gender()
     elif gender_choices.lower() in user_choices['see_gender_choices']:
         see_gender()
+    elif gender_choices.lower() in user_chouces['delete_gender_choices']:
+        delete_gender()
+    elif gender_choices.lower() in user_chpices['edit_gender_choices']:
+        edit_gender()
     else:
         print('Invalid Choice')
         gender_selection()
