@@ -15,7 +15,7 @@ def see_address():
         address_info = save_address()
         print('Saved address: ')
         for address, address_info in save_address.items():
-            print(f'Street Address: {address}, State: {address_info["State/province"]}, City: {address_info["City"]}, Zipcode: {address_info["Zipcode"]}, Apartment Number: {address_info["Apartment Number"]}')
+            print(f'Street Address: {address_info["address"]}, State: {address_info["State/province"]}, City: {address_info["City"]}, Zipcode: {address_info["Zipcode"]}, Apartment Number: {address_info["Apartment Number"]}')
 
 def see_banking():
     if not save_banking:
@@ -34,7 +34,7 @@ def see_banking():
         banking_info = save_banking()
         print('Saved Banking Information: ')
         for banking, banking_info in save_banking.items():
-            print(f'Account: {banking}, Routing: {banking_info["Routing"]}, Account Type: {banking_info["Account Type"]}, Banking Website: {banking_info["Bank Website"]}, Phone Number: {banking_info["Phone Number"]}')
+            print(f'Bank: {banking_info["bank"]} Account {banking_info["account"]} Routing {banking_info["routing"]} Account Type {banking_info["type"]} Website {banking_info["website"]} Phone Number {banking_info["phone number"]}')
 
 def see_ssn():
     if not save_ssn:
@@ -53,7 +53,7 @@ def see_ssn():
         ssn_info = save_ssn()
         print('Saved Social Security Number:')
         for ssn, ssn_info in save_ssn.items():
-            print(f'Social Security Number: {ssn}')
+            print(f'Social Security Number: {ssn_info["ssn"]}')
             
 def see_phone_number():
     if not save_phone_number():
@@ -72,7 +72,7 @@ def see_phone_number():
         phone_number_info = save_phone_number()
         print('Saved Phone Number')
         for phone_number, phone_number_info in save_phone_number.items():
-            print(f'Phone Number: {phone_number}')
+            print(f'Phone number: {phone_number_info["phone"]}, Primary Contact: {phone_number_info["primary"]}, Emergency Contacts: {phone_number_info["emergency"]}')
             
 def see_login():
     if not save_login():
@@ -91,7 +91,7 @@ def see_login():
         login_info = save_login()
         print('Saved Login')
         for login, login_info in save_login.items():
-            print(f'Domain: {login}, Username: {login_info["Username"]}, Password: {login_info["Password"]}, Email: {login_info["Email"]}, Type: {login_info["Account Type"]}, Name: {login_info["Name"]}')
+            print(f'Domain {login_info["Domain"]}, Username: {login_info["Username"]}, Password: {login_info["Password"]}, Account Type: {login_info["type"]}, Account Name: {login_info["name"]}')
         
 def see_email():
     if not save_email():
@@ -110,7 +110,7 @@ def see_email():
         email_info = save_email()
         print('Saved Email')     
         for email, email_info in save_email.itmes():
-            print(f'Email: {email}')
+            print(f'Email: {email_info["email"]}, Primary Email: {email_info["primary"]}, Business Email: {email_info["business"]}, Preffered Email for Communication: {email_info["preferred"]}')
             
 def see_password():
     if not save_password():
@@ -129,7 +129,7 @@ def see_password():
         password_info = save_password()
         print('Saved Password')
         for password, password_info in save_password.items():
-            print(f'Password: {password}')
+            print(f'Password: {password_info["password"]}')
             
 def see_birth():
     if not save_birth():
@@ -148,7 +148,7 @@ def see_birth():
         birth_info = save_birth()
         print('Saved Birthday')
         for birth, birth_info in save_birth.items():
-            print(f'Day: {birth}, Month: {birth_info["Day"]}, Year: {birth_info["Year"]}')
+            print(f'Day: {birth_info["day"]}, Month: {birth_info["month"]}, Year: {birth_info["year"]}')
             
 def see_gender():
     if not save_gender():
@@ -166,7 +166,7 @@ def see_gender():
     else:
         print('Saved Gender')
         for gender, gender_info in save_gender.items():
-            print(f'Gender {gender_info}')
+            print(f'Sex: {gender_info["sex"]}, Gender: {gender_info["gender"]}, Pronouns: {gender_info["pronouns"]}')
             
 def see_nationality():
     if not save_nationality():
@@ -185,7 +185,7 @@ def see_nationality():
         nationality_info = save_nationality()
         print('Saved Nationality')
         for nationality, nationality_info in save_nationality.items():
-            print(f'Country {nationality_info}, Country of Citizenship {nationality_info["Country of Citizenship"]}, National Origin {nationality_info["National Origin"]}')
+            print(f'Country {nationality_info["nationality"]}, Country of Citizenship: {nationality_info["citizenship"]}, National Origin: {nationality_info["origin"]}')
             
 def see_occupation():
     if not save_nationality():
@@ -204,7 +204,7 @@ def see_occupation():
         occupation_info = save_occupation()
         print('Saved Occupation')
         for occupation, occupation_info in save_occupation.items():
-            print(f'Job Title: {occupation_info}, Company: {occupation_info["company"]}, Profession: {occupation_info["profession"]}, Years of Experience: {occupation_info["years of experience"]}')
+            print(f'Job Title: {occupation_info["title"]}, Company: {occupation_info["company"]}, Profession: {occupation_info["profession"]}, Years of Experience: {occupation_info["years of experience"]}')
             
 def see_education():
     if not save_education():
@@ -223,7 +223,7 @@ def see_education():
         education_info = save_education()
         print('Saved Education')
         for education, education_info in save_education.info():
-            print(f'highest level of education {education_info["level"]}, Highest degree earned {education_info["degree"]}, Field of study {education_info["field"]}')
+            print(f'highest level of education: {education_info["level"]}, Highest degree earned: {education_info["degree"]}, Field of study: {education_info["field"]}')
         
 def see_medical():
     if not save_medical():
@@ -242,7 +242,7 @@ def see_medical():
         medical_info = save_medical()
         print('Saved Medical')
         for medical, medical_info in save_medical.items():
-            print(f'Medical Condition {medical_info["condition"]}, Medical diagnosis {medical_info["diagnosis"]}, Name of Medication {medical_info}, Dosage of Medication {medical_info["name"]}, Allergies {medical_info["allergies"]}, Blood Type {medical_info["blood_type"]}, Chronic Illness {medical_info["illness"]}, Medical Devices or Impants {medical_info["implants"]}, Medical history {medical_info["history"]}')
+            print(f'Medical Condition: {medical_info["condition"]}, Medical diagnosis: {medical_info["diagnosis"]}, Name of Medication: {medical_info}, Dosage of Medication: {medical_info["name"]}, Allergies: {medical_info["allergies"]}, Blood Type: {medical_info["blood_type"]}, Chronic Illness: {medical_info["illness"]}, Medical Devices or Impants: {medical_info["implants"]}, Medical history: {medical_info["history"]}')
 
 def see_insurance():
     if not save_insurance():
@@ -261,7 +261,7 @@ def see_insurance():
         insurance_info = save_insurance()
         print('Saved Insurance')
         for insurance, insurance_info in save_insurance.items():
-            print(f'Insurance company name {insurance_info["name"]}, Insurance policy number{insurance_info["policy"]}, Insurance group number{insurance_info["group"]}, Insurance plan type{insurance_info["plan_type"]}, Insurance plan effective date{insurance_info["effective_date"]}, Insurance plan expiration date{insurance_info["expiration_date"]}, Insurance plan coverage details{insurance_info["details"]}, Assets Injured{insurance_info["insured"]}, Insurance plans deductible amount{insurance_info["deductibe"]}, Insurance plans co-pay amount{insurance_info["co_payment"]}')
+            print(f'Insurance company name: {insurance_info["name"]}, Insurance policy number: {insurance_info["policy"]}, Insurance group number: {insurance_info["group"]}, Insurance plan type: {insurance_info["plan_type"]}, Insurance plan effective date: {insurance_info["effective_date"]}, Insurance plan expiration date: {insurance_info["expiration_date"]}, Insurance plan coverage details: {insurance_info["details"]}, Assets Injured: {insurance_info["insured"]}, Insurance plans deductible amount: {insurance_info["deductibe"]}, Insurance plans co-pay amount: {insurance_info["co_payment"]}')
        
 def see_passport():
     if not save_passport():
@@ -280,7 +280,7 @@ def see_passport():
         passport_info = save_passport()
         print('Saved Passport')
         for passport, passport_info in save_passport.items():
-            print(f'Passport number {passport_info["number"]}, Date of Issue {passport_info["date"]}, Date of Expiration {passport_info["expiration"]}, Issuing Country {passport_info["country"]}, Place of Issue {passport_info["place"]}, Full Name {passport_info["name"]}, Date of Birth {passport_info["dob"]}, Gender {passport_info["gender"]}, Nationality {passport_info["nationality"]}, Restrictions or Limitations {passport_info["restrictions"]}')
+            print(f'Passport number: {passport_info["number"]}, Date of Issue: {passport_info["date"]}, Date of Expiration: {passport_info["expiration"]}, Issuing Country: {passport_info["country"]}, Place of Issue: {passport_info["place"]}, Full Name: {passport_info["name"]}, Date of Birth: {passport_info["dob"]}, Gender: {passport_info["gender"]}, Nationality: {passport_info["nationality"]}, Restrictions or Limitations: {passport_info["restrictions"]}')
     
 def see_legal():
     if not save_legal():
@@ -299,7 +299,7 @@ def see_legal():
         legal_info = save_legal()
         print('Saved legal information')
         for legal, legal_info in save_legal.items():
-            print(f'Legal Issues: {legal_information["issues"]} Legal Obligations or Restrictions: {legal_information["obligations"]} Legal Documents: {legal_information["documents"]}')
+            print(f'Legal Issues: {legal_info["issues"]} Legal Obligations or Restrictions: {legal_info["obligations"]} Legal Documents: {legal_info["documents"]}')
             
 def see_ethnicity():
     if not save_ethnicity():
