@@ -16,6 +16,6 @@ def generate_passwords():
             if char not in special and char not in numbers and char not in lowercase and char not in capitals:
                 password += char
         print(password)
-        save_generated_password = input('Would you like to save this password (make sure to copy and paste the password)')
-        if save_generated_password in ['Yes', 'yes', 'Y', 'y', 'Save Password', 'Save password', 'save password']:
-            login_saver()
+        save_password = input('Would you like to save this password? (make sure to copy the password before hand): ')
+        if save_password.lower in password_input['save_generated_password_choices']:
+            
