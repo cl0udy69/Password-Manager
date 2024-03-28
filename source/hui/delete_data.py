@@ -6,7 +6,7 @@ def delete_field(data_dict):
         # Prompt user to add new data
         add_new_data = input('Do you want to add new data? (yes/no): ').lower()
         if add_new_data == 'yes':
-            # Logic to add new data, you should implement this part based on your requirements
+            
             print('Adding new data...')
     else:
         print('Field not found')
@@ -18,7 +18,7 @@ def delete_address_field():
         print(f'{field_to_delete.capitalize()} deleted successfully')
         add_new_data = input('Do you want to add new data? (yes/no): ').lower()
         if add_new_data == 'yes':
-            # Logic to add new data for address, if needed
+           
             print('Adding new data...')
     else:
         print('Field not found')
