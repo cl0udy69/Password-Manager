@@ -119,3 +119,9 @@ error_handling_negative = {
     'dont_save_ethnicity_choices' : ['No', 'no', 'N', 'n'],
 }
                                                                                                                                                                                                                    
+password_input = {
+    'save_generated_password_choices' : ['Yes', 'yes', 'Y', 'y', 'Save Password', 'Save password', 'save password'],
+    'dont_save_generated_password_choices' : ['No', 'no', 'N', 'n', 'Dont Save Password', 'Dont save password', 'dont save password'],
+    'save_generated_password_individually_choices' : ['Save Indivudally', 'Save individually' 'save indivudally', 'Individually', 'individually'],
+    'save_generated_password-login_choices' : ['Save in Login', 'Save in login', 'save in login', 'Save to Login', 'Save to login', 'save to login', 'Save to a login', 'save to a login', 'Login', 'login']
+}
