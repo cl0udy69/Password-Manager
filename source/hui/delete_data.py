@@ -1,154 +1,161 @@
-def delete_field(data_dict):
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in data_dict:
-        del data_dict[field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-        # Prompt user to add new data
-        add_new_data = input('Do you want to add new data? (yes/no): ').lower()
-        if add_new_data == 'yes':
-            
-            print('Adding new data...')
-    else:
-        print('Field not found')
-
-def delete_address_field():
-    field_to_delete = input('Enter the field you would like to delete (e.g. State, Address, Zipcode, etc.): ').lower()
+def delete_address_field(save_address):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
     if field_to_delete in save_address:
         del save_address[field_to_delete]
         print(f'{field_to_delete.capitalize()} deleted successfully')
-        add_new_data = input('Do you want to add new data? (yes/no): ').lower()
-        if add_new_data == 'yes':
-           
-            print('Adding new data...')
+        
+        save_changes = input('Do you want to save the changes? (yes/no): ').lower()
+        if save_changes == 'yes':
+            # Save the modified data
+            # Example: save_address_to_file(save_address)
+            print('Changes saved.')
+        elif save_changes == 'no':
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
     else:
         print('Field not found')
+
         
-def delete_banking_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
+def delete_banking_field(save_banking):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
     if field_to_delete in save_banking:
         del save_banking[field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-        add_new_data = input('Do you want to add new data? (yes/no): ').lower()
-        if add_new_data == 'yes':
-            # Logic to add new data for banking, if needed
-            print('Adding new data...')
-    else:
-        print('Field not found')
+        print(f'{field_to_delete.capitaize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+        
 
-def delete_ssn_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_ssn[ssn]:
-        del save_ssn[ssn][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted succesfully')
-    else:
-        print('Field not found')
+def delete_ssn_field(save_ssn):
+    field_to_delete = input('Enter the field you want to delete: ').lower() 
+    if field_to_delete in save_ssn:
+        del save_ssn[field_to_delete]
+        print(f'{field_to_delete.capitalize()} delete successfully')
         
-def delete_phone_number_field():
-    field_to_delete = input('Enter the field you would like to delete').lower()
-    if field_to_delte in save_phone_number[phone_number]:
-        del save_phone_number[phone_number][field_to_delete]
-        print(f'{field_to_delete.capitalize()} delete succesfully')
-    else:
-        print('Field not found')
+        save_changes = input('Do you want to save the changes?: ').lower()
         
-def delete_login_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_login[logni]:
-        del save_login[login][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
         
-def delete_email_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_email[email]:
-        del save_email[email][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
+def delete_phone_number_field(save_phone_number):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delet in save_phone_number:
+        del save_phone_number[field_to_delete]
+        print(f'{field_to_delete.capitalize()} updated successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
     
-def delete_password_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_password[password]:
-        del save_password[password][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
-        
-def delete_birth_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_birth[birth]:
-        del save_birth[birth][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
-        
-def delete_gender_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_gender[gender]:
-        del save_gender[gender][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
-        
-def delete_nationality_field():
-    field_to_delete = input('Enter the fieled you would like to delete: ').lower()
-    if field_to_delete in save_nationality[nationality]:
-        del save_nationality[nationality][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
-        
-def delete_occupation_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_occupation[occupation]:
-        del save_occupation[occupation][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
-        
-def delete_education_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_education[education]:
-        del save_education[education][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
 
-def delete_medical_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_medical[medical]:
-        del save_medical[medica][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
+def delete_login_field(save_login):
+    field_to_delete = input('Enter the field you want to delete: ').lower() 
+    if field_to_delete in save_login:
+        del save_login[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted succesfully')
         
-def delete_insurance_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_insurance[insurance]:
-        del save_insurance[insurance][field_to_delete]
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_email_field(save_email):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_email:
+        del save_email[field_to_delete]
         print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
         
-def delete_passport_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_pasport[passport]:
-        del save_passport[passport][field_to_delete]
+        save_changes = input('Would you ;ike to save the changes?: ').lower()
+    
+
+def delete_password_field(save_password):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_password:
+        del save_password[field_to_delete]
         print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
         
-def delete_legal_field():
-    field_to_delete = input('Enter the field you would like to delete: ').lower()
-    if field_to_delete in save_legal[legal]:
-        del save_legal[legal][field_to_delete]
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_birth_field(save_birth):
+    field_to_delete = input('Enter the field you want o delete: ').lower()
+    if field_to_delete in save_birth:
+        del save_birth[field_to_delete]
         print(f'{field_to_delete.capitalize()} deleted successfully')
-    else:
-        print('Field not found')
         
-def delete_ethnicity_field():
-    field_to_delete = input('Enter the field would like to delete: ').lower()
-    if field_to_delete in save_ethnicity[ethnicity]:
-        del save_ethnicity[ethnicity][field_to_delete]
-        print(f'{field_to_delete.capitalize()} deleted successfully ')
+        save_changes = input('Do you want to save the changes: ').lower()
+    
+
+def delete_gender_field(save_gender):
+    field_to_delete = input('Enter the field you want to edit: ').lower()
+    if field_to_delete in save_gender:
+        del save_gender[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes')
+    
+
+def delete_nationality_field(save_nationality):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_nationality:
+        del save_nationality[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_occupation_field(save_occupation):
+    field_to_delete = input('Enter the field you want to edit: ').lower()
+    if field_to_Delete in save_occupation:
+        del save_occupation[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_education_field(save_education):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_education:
+        del save_education[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_medical_field(save_medical):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_medical:
+        del save_medical[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_insurance_field(save_insurance):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_insurance:
+        del save_insurance[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_driving_field(save_driving):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_driving:
+        del save_driving[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_legal_field(save_legal):
+    field_to_delete = input('Enter the field you want to edit: ')
+    if field_to_dele in save_legal:
+        del save_legal[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes?: ').lower()
+    
+
+def delete_ethnicity_field(save_ethnicity):
+    field_to_delete = input('Enter the field you want to delete: ').lower()
+    if field_to_delete in save_ethnicity:
+        del save_ethnicity[field_to_delete]
+        print(f'{field_to_delete.capitalize()} deleted successfully')
+        
+        save_changes = input('Do you want to save the changes')
