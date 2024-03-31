@@ -5,11 +5,10 @@ def delete_address_field(save_address):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes? (yes/no): ').lower()
-        if save_changes == 'yes':
-            # Save the modified data
-            # Example: save_address_to_file(save_address)
+        if save_changes in error_handling_positive['dont_delete_address_choices']:
+            save_address_to_file(save_address)
             print('Changes saved.')
-        elif save_changes == 'no':
+        elif save_changes in error_handling_negative['delete_address_choices']:
             print('Changes discarded.')
         else:
             print('Invalid input. Changes discarded.')
@@ -24,6 +23,15 @@ def delete_banking_field(save_banking):
         print(f'{field_to_delete.capitaize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_banking_choices']:
+            save_banking_to_file(save_banking)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delet_banking_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
         
 
 def delete_ssn_field(save_ssn):
@@ -33,6 +41,15 @@ def delete_ssn_field(save_ssn):
         print(f'{field_to_delete.capitalize()} delete successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_ssn_choices']:
+            save_ssn_to_file(save_ssn)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delet_ssn_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
         
         
 def delete_phone_number_field(save_phone_number):
@@ -42,6 +59,15 @@ def delete_phone_number_field(save_phone_number):
         print(f'{field_to_delete.capitalize()} updated successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delet_phone_number_choices']:
+            save_phone_number_to_file(save_phone_number)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_phone_number_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded')
+    else:
+        print('Field not found')
     
 
 def delete_login_field(save_login):
@@ -51,6 +77,15 @@ def delete_login_field(save_login):
         print(f'{field_to_delete.capitalize()} deleted succesfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_change in error_handling_positive['dont_delete_login_choices']:
+            save_login_to_file(save_login)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_login_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invali input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_email_field(save_email):
@@ -60,6 +95,15 @@ def delete_email_field(save_email):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Would you ;ike to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_email_choices']:
+            save_email_to_file(save_email)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_email_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_password_field(save_password):
@@ -69,6 +113,15 @@ def delete_password_field(save_password):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_password_choices']:
+            save_password_to_file(save_password)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_password_choices']:
+            print('Changes discarded')
+        else:
+            print('Invalid input. Changes discarded')
+    else:
+        print('Field not found')
     
 
 def delete_birth_field(save_birth):
@@ -78,6 +131,15 @@ def delete_birth_field(save_birth):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes: ').lower()
+        if save_changes in error_handling_positive['dont_delete_birth_choices']:
+            save_birth_to_file(save_birth)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delet_birth_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_gender_field(save_gender):
@@ -87,6 +149,15 @@ def delete_gender_field(save_gender):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes')
+        if save_changes in error_handling_positive['dont_delete_gender_choices']:
+            save_gender_to_file(save_gender)
+            print('Changes saved')
+        elif save_changes in error_handling_negative['delet_gender_choices']:
+            print('Changes discarded')
+        else:
+            ('Invalid input. Changes discarded')
+    else:
+        print('Field not found')
     
 
 def delete_nationality_field(save_nationality):
@@ -96,6 +167,15 @@ def delete_nationality_field(save_nationality):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_nationality_choices']:
+            save_nationality_to_file(save_nationality)
+            print('Change saved.')
+        elif save_changes in error_handling_negative['delet_nationality_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_occupation_field(save_occupation):
@@ -105,6 +185,15 @@ def delete_occupation_field(save_occupation):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in erroe_handling_positive['dont_delete_occupation_choices']:
+            save_occupation_to_file(save_occupation)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_occupation_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_education_field(save_education):
@@ -114,6 +203,15 @@ def delete_education_field(save_education):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_education_choices']:
+            save_education_to_file(save_education)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_education_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_medical_field(save_medical):
@@ -123,6 +221,15 @@ def delete_medical_field(save_medical):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_medical_choices']:
+            save_medical_to_file(save_medical)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_medical_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_insurance_field(save_insurance):
@@ -132,6 +239,15 @@ def delete_insurance_field(save_insurance):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_insurance_choices']:
+            save_insurance_to_file(save_insurance)
+            print('Changes saved')
+        elif save_changes in error_handling_negative['delete_insurance_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_driving_field(save_driving):
@@ -141,6 +257,15 @@ def delete_driving_field(save_driving):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_driving_choices']:
+            save_driving_to_file(save_driving)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_driving_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_legal_field(save_legal):
@@ -150,6 +275,15 @@ def delete_legal_field(save_legal):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes?: ').lower()
+        if save_changes in error_handling_positive['dont_delete_legal_choices']:
+            save_legal_to_file(save_legal)
+            print('Change saved.')
+        elif save_changes in error_handling_negative['delet_legal_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
     
 
 def delete_ethnicity_field(save_ethnicity):
@@ -159,3 +293,12 @@ def delete_ethnicity_field(save_ethnicity):
         print(f'{field_to_delete.capitalize()} deleted successfully')
         
         save_changes = input('Do you want to save the changes')
+        if save_changes in error_handling_positive['dont_delete_ethnicity_choices']:
+            save_ethnicity_to_file(save_ethnicity)
+            print('Changes saved.')
+        elif save_changes in error_handling_negative['delete_ethnicity_choices']:
+            print('Changes discarded.')
+        else:
+            print('Invalid input. Changes discarded.')
+    else:
+        print('Field not found')
