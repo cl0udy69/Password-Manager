@@ -3,10 +3,10 @@ def delete_address_field(save_address):
     if field_to_delete in save_address:
         del save_address[field_to_delete]
         print(f'{field_to_delete.capitalize()} deleted successfully')
-        
+
         save_changes = input('Do you want to save the changes? (yes/no): ').lower()
         if save_changes in error_handling_positive['dont_delete_address_choices']:
-            save_address_to_file(save_address)
+            save_address_to_file(save_address, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_address_choices']:
             print('Changes discarded.')
@@ -14,7 +14,6 @@ def delete_address_field(save_address):
             print('Invalid input. Changes discarded.')
     else:
         print('Field not found')
-
         
 def delete_banking_field(save_banking):
     field_to_delete = input('Enter the field you want to delete: ').lower()
@@ -24,9 +23,9 @@ def delete_banking_field(save_banking):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_banking_choices']:
-            save_banking_to_file(save_banking)
+            save_banking_to_file(save_banking, 'address.json')
             print('Changes saved.')
-        elif save_changes in error_handling_negative['delet_banking_choices']:
+        elif save_changes in error_handling_negative['delete_banking_choices']:
             print('Changes discarded.')
         else:
             print('Invalid input. Changes discarded.')
@@ -42,7 +41,7 @@ def delete_ssn_field(save_ssn):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_ssn_choices']:
-            save_ssn_to_file(save_ssn)
+            save_ssn_to_file(save_ssn, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delet_ssn_choices']:
             print('Changes discarded.')
@@ -60,7 +59,7 @@ def delete_phone_number_field(save_phone_number):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delet_phone_number_choices']:
-            save_phone_number_to_file(save_phone_number)
+            save_phone_number_to_file(save_phone_number, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_phone_number_choices']:
             print('Changes discarded.')
@@ -78,7 +77,7 @@ def delete_login_field(save_login):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_change in error_handling_positive['dont_delete_login_choices']:
-            save_login_to_file(save_login)
+            save_login_to_file(save_login, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_login_choices']:
             print('Changes discarded.')
@@ -96,7 +95,7 @@ def delete_email_field(save_email):
         
         save_changes = input('Would you ;ike to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_email_choices']:
-            save_email_to_file(save_email)
+            save_email_to_file(save_email, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_email_choices']:
             print('Changes discarded.')
@@ -114,7 +113,7 @@ def delete_password_field(save_password):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_password_choices']:
-            save_password_to_file(save_password)
+            save_password_to_file(save_password, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_password_choices']:
             print('Changes discarded')
@@ -132,7 +131,7 @@ def delete_birth_field(save_birth):
         
         save_changes = input('Do you want to save the changes: ').lower()
         if save_changes in error_handling_positive['dont_delete_birth_choices']:
-            save_birth_to_file(save_birth)
+            save_birth_to_file(save_birth, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delet_birth_choices']:
             print('Changes discarded.')
@@ -150,7 +149,7 @@ def delete_gender_field(save_gender):
         
         save_changes = input('Do you want to save the changes')
         if save_changes in error_handling_positive['dont_delete_gender_choices']:
-            save_gender_to_file(save_gender)
+            save_gender_to_file(save_gender, 'address.json')
             print('Changes saved')
         elif save_changes in error_handling_negative['delet_gender_choices']:
             print('Changes discarded')
@@ -168,7 +167,7 @@ def delete_nationality_field(save_nationality):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_nationality_choices']:
-            save_nationality_to_file(save_nationality)
+            save_nationality_to_file(save_nationality, 'address.json')
             print('Change saved.')
         elif save_changes in error_handling_negative['delet_nationality_choices']:
             print('Changes discarded.')
@@ -186,7 +185,7 @@ def delete_occupation_field(save_occupation):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in erroe_handling_positive['dont_delete_occupation_choices']:
-            save_occupation_to_file(save_occupation)
+            save_occupation_to_file(save_occupation, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_occupation_choices']:
             print('Changes discarded.')
@@ -204,7 +203,7 @@ def delete_education_field(save_education):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_education_choices']:
-            save_education_to_file(save_education)
+            save_education_to_file(save_education, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_education_choices']:
             print('Changes discarded.')
@@ -222,7 +221,7 @@ def delete_medical_field(save_medical):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_medical_choices']:
-            save_medical_to_file(save_medical)
+            save_medical_to_file(save_medical, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_medical_choices']:
             print('Changes discarded.')
@@ -240,7 +239,7 @@ def delete_insurance_field(save_insurance):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_insurance_choices']:
-            save_insurance_to_file(save_insurance)
+            save_insurance_to_file(save_insurance, 'address.json')
             print('Changes saved')
         elif save_changes in error_handling_negative['delete_insurance_choices']:
             print('Changes discarded.')
@@ -258,7 +257,7 @@ def delete_driving_field(save_driving):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_driving_choices']:
-            save_driving_to_file(save_driving)
+            save_driving_to_file(save_driving, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_driving_choices']:
             print('Changes discarded.')
@@ -276,7 +275,7 @@ def delete_legal_field(save_legal):
         
         save_changes = input('Do you want to save the changes?: ').lower()
         if save_changes in error_handling_positive['dont_delete_legal_choices']:
-            save_legal_to_file(save_legal)
+            save_legal_to_file(save_legal, 'address.json')
             print('Change saved.')
         elif save_changes in error_handling_negative['delet_legal_choices']:
             print('Changes discarded.')
@@ -294,7 +293,7 @@ def delete_ethnicity_field(save_ethnicity):
         
         save_changes = input('Do you want to save the changes')
         if save_changes in error_handling_positive['dont_delete_ethnicity_choices']:
-            save_ethnicity_to_file(save_ethnicity)
+            save_ethnicity_to_file(save_ethnicity, 'address.json')
             print('Changes saved.')
         elif save_changes in error_handling_negative['delete_ethnicity_choices']:
             print('Changes discarded.')
