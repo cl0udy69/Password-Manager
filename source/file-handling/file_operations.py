@@ -62,16 +62,132 @@ def save_ethnicity_to_file(ethnicity_data, filename):
     with open(filename, 'w') as file:
         json.dump(ethnicity, file, indent=4)
         
-
-
 def load_address_from_file(filename):
     try:
         with open(filename, 'r') as file:
             return json.load(file)
     except FileNotFoundError:
         return {}
-    
 
+def load_banking_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_ssn_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_phone_number_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_login_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_email_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_password_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_birth_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_gender_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_nationality_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_occupation_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_education_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_medical_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_insurance_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_legal_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+    
+def load_ethnicity_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
 
 save_address_data = load_address_from_file('address.json')
+save_banking_data = load_banking_from_file('banking.json')
+save_ssn_data = load_ssn_from_file('ssn.json')
+save_phone_number_data = load_phone_number_from_file('phone_number.json')
+save_login_data = load_login_from_file('login.json')
+save_email_data = load_email_from_file('email.json')
+save_password_data = load_password_from_file('password.json')
+save_birth_data = load_birth_from_file('birth.json')
+save_gender_data = load_gender_from_file('gender.json')
+save_nationality_data = load_nationality_from_file('nationality.json')
+save_occupation_data = load_occupation_from_file('occupation.json')
+save_education_data = load_education_from_file('education.json')
+save_medical_data = load_medical_from_file('medical.json')
+save_insurance_data = load_insurance_from_file('insurance.json')
+save_legal_data = load_legal_from_file('legal.json')
+save_ethnicity_data = load_ethnicity_from_file('ethnicity.json')
 user_file_choices = ['save', 'edit', 'delete']
