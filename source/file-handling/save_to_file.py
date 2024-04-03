@@ -83,4 +83,20 @@ def save_ethnicity_to_file(save_ethnicity, filename):
         for key, value in save_ethnicity.items():
             file.write(f'{key}: {value}\n')
 
-            
+save_data_to_file(save_address, 'address.txt')
+save_data_to_file(save_ssn, 'ssn.txt')
+save_data_to_file(save_phone_number, 'phone_number.txt')
+save_data_to_file(save_login, 'login.txt')
+save_data_to_file(save_email, 'email.txt')
+save_data_to_file(save_password, 'password.txt')
+save_data_to_file(save_birth, 'birth.txt')
+save_data_to_file(save_gender, 'gender.txt')
+save_data_to_file(save_nationality, 'nationality.txt')
+save_data_to_file(save_occupation, 'occupation.txt')
+save_data_to_file(save_education, 'education.txt')
+save_medical_to_file(save_medical, 'medical.txt')
+save_data_to_file(save_insurance, 'insurance.txt')
+save_data_to_file(save_driving, 'driving.txt')
+save_data_to_file(save_passport, 'passport.txt')
+save_data_to_file(save_legal, 'legal.txt')
+save_data_to_file(save_ethnicity, 'ethnicity.txt')

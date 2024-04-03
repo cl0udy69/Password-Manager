@@ -44,11 +44,11 @@ def delete_data_field(data, field_name):
     else:
         print('Field not found')
 
-
 saved_data = load_data_from_file()
 
+# Edit data fields
 edit_data_field(saved_data['address'], 'field', 'new_value')
-edit_data_field(saved_data['banking_info'], 'field, new_value')
+edit_data_field(saved_data['banking_info'], 'field', 'new_value')
 edit_data_field(saved_data['ssn'], 'field', 'new_value')
 edit_data_field(saved_data['phone_number'], 'field', 'new_value')
 edit_data_field(saved_data['login'], 'field', 'new_value')
@@ -66,6 +66,7 @@ edit_data_field(saved_data['passport'], 'field', 'new_value')
 edit_data_field(saved_data['legal'], 'field', 'new_value')
 edit_data_field(saved_data['ethnicity'], 'field', 'new_value')
 
+# Delete data fields
 delete_data_field(saved_data['address'], 'field')
 delete_data_field(saved_data['banking_info'], 'field')
 delete_data_field(saved_data['ssn'], 'field')
@@ -73,7 +74,6 @@ delete_data_field(saved_data['phone_number'], 'field')
 delete_data_field(saved_data['login'], 'field')
 delete_data_field(saved_data['password'], 'field')
 delete_data_field(saved_data['email'], 'field')
-delete_data_field(saved_data['password'], 'field')
 delete_data_field(saved_data['birth'], 'field')
 delete_data_field(saved_data['gender'], 'field')
 delete_data_field(saved_data['nationality'], 'field')
@@ -85,9 +85,5 @@ delete_data_field(saved_data['driving'], 'field')
 delete_data_field(saved_data['passport'], 'field')
 delete_data_field(saved_data['legal'], 'field')
 delete_data_field(saved_data['ethnicity'], 'field')
-
-
-
-
 
 save_data_to_file(saved_data)
