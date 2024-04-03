@@ -241,7 +241,7 @@ def edit_education():
 def edit_medical():
     print("Select the field you want to edit:")
     for medical, data in save_medical.items():
-        print(meical)
+        print(medical)
         for field in medical:
             print(f" - {field}")
     
