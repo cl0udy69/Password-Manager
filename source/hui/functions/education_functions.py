@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def education_selection():
     education_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if education_choices in user_choices['save_education_choices']:
@@ -10,6 +12,11 @@ def education_selection():
         edit_education()
     else:
         print('Invalid input.')
+        
+    save_data_to_file(education_data, filename)
+    
+    load_data = load_data_from_file(filename)
+    print("Loaded data ", load_data)
         
 def save_education():
     level = input('Highest level of education: ')
