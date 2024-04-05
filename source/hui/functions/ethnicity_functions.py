@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def ethnicity_selection():
     ethnicity_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if ethnicity_choices in user_chocices['save_ethnicity_choices']:
@@ -10,6 +12,11 @@ def ethnicity_selection():
         edit_ethnicity()
     else:
         print('Invalid input.')
+        
+    save_data_to_file(ethnicity_data, filename)
+    
+    load_data = load_data_from_file(filename)
+    print("Loaded data ", load_data)
         
 def save_ethnicity():
     ethnicity = input('Ethnicity: ')
