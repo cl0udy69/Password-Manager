@@ -12,6 +12,11 @@ def banking_selection():
         print('Invalid Input')
         banking_selection()
         
+    save_data_to_file(banking_data, filename)
+    
+    loaded_data = load_data_from_file(filename)
+    print("Loaded Data: ", loaded_data)
+        
 def save_banking():
     bank = input('Bank: ')
     account = input('Account: ')
