@@ -1,4 +1,6 @@
 # Function to handle address selection
+from file_operations import save_data_to_file, load_data_from_file
+
 def address_selection():
     address_choices = input('What would you like to do with your addresses?: save, view, edit, or delete?: ')
     if address_choices.lower() in user_choices['save_address_choices']:
@@ -12,6 +14,11 @@ def address_selection():
     else:
         print('Invalid Choice')
         address_selection()
+        
+    save_data_to_file(address_data, filename)
+
+    loaded_data = load_data_from_file(filename)
+    print("Loaded Data:", loaded_data)
 
 def save_address():
     address = input('Street Address: ')
@@ -76,4 +83,6 @@ def edit_address(save_address):
             print('Field not found')
     else:
         print('Address not found')
+        
+
 
