@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def birth_selection():
     birth_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if birth_choices in user_choices['save_birth_choices']:
@@ -10,6 +12,11 @@ def birth_selection():
         edit_birth()
     else:
         print('Invalid input.')
+        
+    save_data_to_file(birth_data, filename)
+    
+    load_data = load_data_from_file(filename)
+    print("Loaded data ", loaded_data)
         
 def save_birth():
     day = input('Day: ')
