@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def email_selection():
     email_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if email_choices in user_choices['save_email_choices']:
@@ -10,6 +12,11 @@ def email_selection():
         edit_email()
     else:
         print('Invalid input.')
+        
+    save_data_to_file(email_data, filename)
+    
+    load_data = load_data_from_file(filename)
+    print("Loaded data ", load_data)
 
 def save_email():
     email = input('Email: ')
