@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def nationality_selection():
     nationality_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if nationality_choices in user_choices['save_nationality_choices']:
@@ -10,6 +12,11 @@ def nationality_selection():
         edit_nationality()
     else:
         print('Invalid input.')
+        
+    save_data_to_file(nationality_data, filename)
+    
+    loaded_data = load_data_from_file(filename)
+    print("Loaded data", loaded_data)
         
 def save_nationality():
     nationality = input('Country: ')
