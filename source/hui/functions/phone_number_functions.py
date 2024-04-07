@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def phone_number_selection():
     phone_number_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if phone_number_choices in user_choices['save_phone_number_choices']:
@@ -10,6 +12,11 @@ def phone_number_selection():
         edit_phone_number()
     else:
         print('Invalid input.')
+        
+    save_data_to_file(phone_number_data, filename)
+    
+    loaded_data = load_data_from_file(filename)
+    print("Loaded data", loaded_data)
         
 def save_phone_number():
     phone = input('Phone Number: ')
