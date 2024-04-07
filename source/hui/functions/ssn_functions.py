@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def ssn_selection():
     ssn_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if ssn_choices in user_choices['save_ssn_choices']:
@@ -8,6 +10,11 @@ def ssn_selection():
         delete_ssn()
     elif ssn_choices in user_choices['edit_ssn_choices']:
         edit_ssn()
+        
+    save_data_to_file(ssn_data, filename)
+    
+    loaded_data = load_data_from_file(filename)
+    print("Loaded data", loaded_data)
         
 def save_ssn():
     ssn = input('Social Security Number: ')
