@@ -15,8 +15,8 @@ def email_selection():
         
     save_data_to_file(email_data, filename)
     
-    load_data = load_data_from_file(filename)
-    print("Loaded data ", load_data)
+    loaded_data = load_data_from_file(filename)
+    print("Loaded data ", loaded_data)
 
 def save_email():
     email = input('Email: ')
