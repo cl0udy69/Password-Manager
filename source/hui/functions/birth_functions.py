@@ -15,7 +15,7 @@ def birth_selection():
         
     save_data_to_file(birth_data, filename)
     
-    load_data = load_data_from_file(filename)
+    loaded_data = load_data_from_file(filename)
     print("Loaded data ", loaded_data)
         
 def save_birth():
