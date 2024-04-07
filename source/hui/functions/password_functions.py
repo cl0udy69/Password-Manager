@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def password_selection():
     password_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if password_choices in user_choices['save_password_choices']:
@@ -10,6 +12,11 @@ def password_selection():
         edit_password()
     else:
         print('Invalid input.')
+        
+    save_data_to_file([password_data, filename])
+    
+    loaded_data = load_data_from_file(filename)
+    print("Loaded data", loaded_data)
         
 def save_password():
     password = input('Password: ')
