@@ -1,3 +1,5 @@
+from file_operations import save_data_to_file, load_data_from_file
+
 def occupation_selection():
     occupation_choices = input('Would you like to save, view, delete, or edit?: ').lower()
     if occupation_choices in user_choices['save_occupation_choices']:
@@ -10,6 +12,11 @@ def occupation_selection():
         edit_occupation()
     else:
         print('Invalid input.')
+        
+    save_data_to_file(occupation_data, filename)
+    
+    loaded_data = load_data_from_file(filename)
+    print("Loaded data", loaded_data)
         
 def save_occupation():
     title = input('Job Title: ')
