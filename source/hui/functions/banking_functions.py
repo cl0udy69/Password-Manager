@@ -1,4 +1,4 @@
-from file_operations import save_data_to_file, load_data_to_file
+from file_operations import save_data_to_file, load_data_from_file
 
 def banking_selection():
     banking_choices = input('Would you like to save, view, edit, or delete?: ').lower()
